@@ -285,6 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const resultElement = document.getElementById("result");
             resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
             sessionStorage.setItem('quizScore', count);
+            localStorage.setItem('Animalkingdom2', count >= 7? true: false)// code by prem
 
             // Redirect to the result page (if needed)
             window.location.href = "score2.html";
