@@ -68,6 +68,11 @@
     ANIMAL KINGDOM </h1></div>
     <div id="timer">10:00</div>
     <script>
+      let attempt = JSON.parse(localStorage.getItem("SocialNetwork")) // code by Prem
+
+      if(!attempt){// code by prem
+        window.location.href = "quiz_SocialNetwork_13_18.html"// code by prem
+      }// code by prem
       function startTimer(duration, display) {
     let timer = duration, minutes, seconds;
     setInterval(function () {
