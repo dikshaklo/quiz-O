@@ -69,6 +69,7 @@
                      CURRENT AFFAIRS</h1></div>
                      <div id="timer">10:00</div>
                      <script>
+                        
                        function startTimer(duration, display) {
                      let timer = duration, minutes, seconds;
                      setInterval(function () {
@@ -81,7 +82,7 @@
                          display.textContent = minutes + ":" + seconds;
 
                          if (--timer < 0) {
-                           submitQuiz();
+                           affair();
                          }
                      }, 1000);
                  }
@@ -91,7 +92,6 @@
                     let timerDisplay = document.getElementById('timer');
                     startTimer(timerDuration, timerDisplay);
                  });</script>
-                 
                        <div id="kingdom">
                    <HR>
                    <p>Q1.Who is the founder of Facebook?</p>
@@ -241,12 +241,11 @@
 
                               <div id="result"></div>
                              <script> 
+                               let attempt = JSON.parse(localStorage.getItem("Animalkingdom2")) // code by Prem
 
-                  let attempt = JSON.parse(localStorage.getItem("Animalkingdom2")) // code by Prem
-
-                if(!attempt){// code by prem
-                    window.location.href = "quiz_AnimalKingdom2_13_18.html"// code by prem
-                }// code by prem
+if(!attempt){// code by prem
+    window.location.href = "quiz_AnimalKingdom2_13_18.html"// code by prem
+}// code by prem
 
 
 
@@ -286,6 +285,7 @@
                  const resultElement = document.getElementById("result");
                  resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
                  sessionStorage.setItem('quizScore', count);
+                 localStorage.setItem('CurrentAffairs', count >= 7? true: false)// code by prem
 
                  // Redirect to the result page (if needed)
                  window.location.href = "score2.html";

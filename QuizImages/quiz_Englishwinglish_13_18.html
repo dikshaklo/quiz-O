@@ -88,7 +88,7 @@ Online HTML, CSS and JavaScript editor to run code online.
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-          submitQuiz();
+          english();
         }
     }, 1000);
 }
@@ -230,7 +230,11 @@ document.addEventListener("DOMContentLoaded", function () {
               <div id="result"></div>
   
               <script >
-            
+               let attempt = JSON.parse(localStorage.getItem("TheEarth")) // code by Prem
+
+if(!attempt){// code by prem
+    window.location.href = "quiz_TheEarth_13_18.html"// code by prem
+}// code by prem
                 
                 
                 function english() {
@@ -266,6 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const resultElement = document.getElementById("result");
             resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
             sessionStorage.setItem('quizScore', count);
+            localStorage.setItem('Englishwinglish', count >= 7? true: false)// code by prem
             
             // Redirect to the result page (if needed)
             window.location.href = "score2.html";

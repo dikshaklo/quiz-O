@@ -70,9 +70,9 @@
     <script>
       let attempt = JSON.parse(localStorage.getItem("SocialNetwork")) // code by Prem
 
-      if(!attempt){// code by prem
-        window.location.href = "quiz_SocialNetwork_13_18.html"// code by prem
-      }// code by prem
+if(!attempt){// code by prem
+  window.location.href = "quiz_SocialNetwork_13_18.html"// code by prem
+}// code by prem
       function startTimer(duration, display) {
     let timer = duration, minutes, seconds;
     setInterval(function () {
@@ -85,7 +85,7 @@
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-          submitQuiz();
+          animalking13();
         }
     }, 1000);
 }
@@ -286,6 +286,8 @@ document.addEventListener("DOMContentLoaded", function () {
             resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
             sessionStorage.setItem('quizScore', count);
             localStorage.setItem('Animalkingdom2', count >= 7? true: false)// code by prem
+           
+
 
             // Redirect to the result page (if needed)
             window.location.href = "score2.html";

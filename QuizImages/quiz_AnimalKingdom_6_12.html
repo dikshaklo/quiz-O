@@ -80,7 +80,7 @@
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-          submitQuiz();
+          animal();
         }
     }, 1000);
 }
@@ -246,6 +246,7 @@ function animal() {
 const resultElement = document.getElementById("result");
 resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
 sessionStorage.setItem('quizScore', count);
+localStorage.setItem('AnimalKingdom', count >= 7? true: false)// code by prem
 
 // Redirect to the result page (if needed)
 window.location.href = "score.html";

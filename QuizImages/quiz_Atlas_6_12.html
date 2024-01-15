@@ -78,16 +78,22 @@
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-          submitQuiz();
+          atlas();
         }
     }, 1000);
+   
 }
 
 document.addEventListener("DOMContentLoaded", function () {
    let timerDuration = 600;
    let timerDisplay = document.getElementById('timer');
    startTimer(timerDuration, timerDisplay);
-});</script>
+});
+let attempt = JSON.parse(localStorage.getItem("AnimalKingdom")) // code by Prem
+
+if(!attempt){// code by prem
+  window.location.href = "quiz_AnimalKingdom_6_12.html"// code by prem
+}// code by prem</script>
   <div id="kingdom"><p>Q1.What is a book of maps called?</p>
     <form>
     <input type="radio" name="Q1" value="Dictionary">
@@ -209,6 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     
     function atlas() {
+     
       let count = 0;
 
 const answers = {
@@ -241,6 +248,7 @@ for (let i = 1; i <= Object.keys(answers).length; i++) {
 const resultElement = document.getElementById("result");
 resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
 sessionStorage.setItem('quizScore', count);
+localStorage.setItem('Atlas', count >= 7? true: false)// code by prem
 
 // Redirect to the result page (if needed)
 window.location.href = "score.html";

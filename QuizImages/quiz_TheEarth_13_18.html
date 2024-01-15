@@ -82,7 +82,7 @@
                          display.textContent = minutes + ":" + seconds;
 
                          if (--timer < 0) {
-                           submitQuiz();
+                           earth();
                          }
                      }, 1000);
                  }
@@ -242,7 +242,11 @@
                    <div id="result"></div>
 
                   <script>
+                      let attempt = JSON.parse(localStorage.getItem("riddles")) // code by Prem
 
+if(!attempt){// code by prem
+    window.location.href = "quiz_riddles_13_18.html"// code by prem
+}// code by prem
 
                        function earth() {
                          let count = 0;
@@ -277,6 +281,7 @@
                    const resultElement = document.getElementById("result");
                    resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
                    sessionStorage.setItem('quizScore', count);
+                   localStorage.setItem('TheEarth', count >= 7? true: false)// code by prem
 
                    // Redirect to the result page (if needed)
                    window.location.href = "score2.html";

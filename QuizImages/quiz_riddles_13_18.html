@@ -86,7 +86,7 @@
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-          submitQuiz();
+          calculateMarks();
         }
     }, 1000);
 }
@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
          <br>
           <input type="radio" name="Q1" value="Both"><label>Both</label><br>
           <input type="radio" name="Q1" value="None of above"><label>None of above</label><br>
+
             <p>Q2. What has a head and a tail but no body?</p>
             <input type="radio" name="Q2" value="Coin"><label>Coin</label>
             <br>
@@ -117,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <br>
             <input type="radio" name="Q2" value="Both"><label>Both</label><br>
             <input type="radio" name="Q2" value="None of above"><label>None of above</label><br>
+
             <p>Q3.  I am an odd number. Take away a letter and I become even. What number am I?
           </p>
           <input type="radio" name="Q3" value="Seven"><label>Seven</label>
@@ -125,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <br>
           <input type="radio" name="Q3" value="Both"><label>Both</label><br>
           <input type="radio" name="Q3" value="None of above"><label>None of above</label><br>
+
             <p>Q4. I have lakes with no water, mountains with no stone and cities with no buildings. What am I?
           </p>
           <input type="radio" name="Q4" value="Atlas"><label>Atlas</label>
@@ -133,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <br>
           <input type="radio" name="Q4" value="Both"><label>Both</label><br>
           <input type="radio" name="Q4" value="None of above"><label>None of above</label><br>
+
             <p>Q5.The more you take, the more you leave behind. What are they?
           </p>
           <input type="radio" name="Q5" value="Shadow"><label>Shadow</label>
@@ -141,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <br>
           <input type="radio" name="Q5" value="footsteps"><label>footsteps</label><br>
           <input type="radio" name="Q5" value="None of above"><label>None of above</label><br>
+
             <p>Q6. What has words, but never speaks?
           </p>
           <input type="radio" name="Q6" value="Lips"><label>Lips</label>
@@ -149,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <br>
           <input type="radio" name="Q6" value="Pen"><label>Pen</label><br>
           <input type="radio" name="Q6" value="Book"><label>Book </label><br>
+
             <p>Q7. I’m tall when I’m young, and I’m short when I’m old. What am I?
           </p> <input type="radio" name="Q7" value="Pen"><label>Pen</label>
           <br>
@@ -164,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <br>
             <input type="radio" name="Q8" value="paper"><label>paper</label><br>
             <input type="radio" name="Q8" value="hands"><label>hands </label><br>
+
           <p>Q9. What is always in front of you but can’t be seen?
         </p>
         <input type="radio" name="Q9" value="Present"><label>Present</label>
@@ -192,7 +199,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
     <script >
-   
+   let attempt = JSON.parse(localStorage.getItem("CurrentAffairs")) // code by Prem
+
+if(!attempt){// code by prem
+    window.location.href = "quiz_CurrentAffairs_13_18.html"// code by prem
+}// code by prem
+
 
 
 function calculateMarks() {
@@ -200,23 +212,27 @@ function calculateMarks() {
 
     const answers = {
         Q1: "All",
-        Q2: "coins",
-        Q3: "seven",
-        Q4: "map",
+        Q2: "Coin",
+        Q3: "Seven",
+        Q4: "Map",
         Q5: "footsteps",
-        Q6: "book",
-        Q7: "candle",
-        Q8: "sponge",
-        Q9: "future",
-        Q10: "towel"
+        Q6: "Book",
+        Q7: "Candle",
+        Q8: "spounge",
+        Q9: "Future",
+        Q10: "Towel"
     };
 
     for (let i = 1; i <= Object.keys(answers).length; i++) {
         const questionKey = "Q" + i;
-        const userAnswer = document.getElementsByName(questionKey)[0].value.trim().toLowerCase();
+        const selectedOption = document.querySelector(`input[name="${questionKey}"]:checked`);
+        
+        if (selectedOption) {
+            const userAnswer = selectedOption.value.trim().toLowerCase();
 
-        if (userAnswer === answers[questionKey].toLowerCase()) {
-            count++;
+            if (userAnswer === answers[questionKey].toLowerCase()) {
+                count++;
+            }
         }
     }
 
@@ -224,10 +240,12 @@ function calculateMarks() {
     const resultElement = document.getElementById("result");
     resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
     sessionStorage.setItem('quizScore', count);
+    localStorage.setItem('riddles', count >= 7 ? true : false);
 
     // Redirect to the result page
     window.location.href = "score2.html";
 }
+
     
 </script>
 </body>

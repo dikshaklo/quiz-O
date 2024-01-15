@@ -79,7 +79,7 @@
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-          submitQuiz();
+          water();
         }
     }, 1000);
 }
@@ -209,7 +209,11 @@ document.addEventListener("DOMContentLoaded", function () {
              
               <div id="result"></div>
               <script >
- 
+ let attempt = JSON.parse(localStorage.getItem("FoodieCorner")) // code by Prem
+
+if(!attempt){// code by prem
+  window.location.href = "quiz_FoodieCorner_19_above.html"// code by prem
+}// code by prem 
     
     function water() {
       let count = 0;
@@ -244,6 +248,7 @@ for (let i = 1; i <= Object.keys(answers).length; i++) {
 const resultElement = document.getElementById("result");
 resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
 sessionStorage.setItem('quizScore', count);
+localStorage.setItem('WaterWorld', count >= 7? true: false)// code by prem
 
 // Redirect to the result page (if needed)
 window.location.href = "score3.html";

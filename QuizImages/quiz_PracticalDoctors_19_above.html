@@ -207,7 +207,12 @@ document.addEventListener("DOMContentLoaded", function () {
 <button type="button" id="submitBtn" onclick="submitQuiz()" >Submit</button></div>
     </form>
 <div id="result"></div>
-<script> 
+<script>
+let attempt = JSON.parse(localStorage.getItem("life")) // code by Prem
+
+if(!attempt){// code by prem
+  window.location.href = "quiz_life_19_above.html"// code by prem
+}// code by prem 
   
   function submitQuiz() {
     let count = 0;
@@ -243,6 +248,7 @@ for (let i = 1; i <= Object.keys(answers).length; i++) {
 const resultElement = document.getElementById("result");
 resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
 sessionStorage.setItem('quizScore', count);
+localStorage.setItem('PracticalDoctors', count >= 7? true: false)// code by prem
 
 // Redirect to the result page (if needed)
 window.location.href = "score3.html";
