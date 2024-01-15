@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>your world</title>
+<!--CSS Part-->
+<style>
+  * {
+      background-color: rgb(1, 36, 16);
+  }
+
+  #animal {
+      background-color: rgb(91, 119, 62);
+      border: 3px solid rgb(6, 40, 79);
+  }
+
+  h1 {
+      text-align: center;
+      font-size: 55px;
+      font-family: serif;
+      color: rgb(171, 200, 209);
+  }
+
+  p {
+      font-weight: bold;
+      color: rgb(180, 219, 252);
+  }
+
+  form {
+      color: aliceblue;
+  }
+
+  #kingdom {
+      border: 2px solid rgb(6, 40, 79);
+      padding: 4%;
+      margin-top: 2%;
+      margin-left: 20%;
+      margin-right: 20%;
+  }
+ 
+  
+  #submitBtn{
+    float: right;
+  background-color: rgb(180, 201, 219);
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25%;
+  font-size: 20px;
+
+}
+
+#timer{
+margin-left: 3%;
+margin-top: 3%;
+position: fixed;
+color: rgb(247, 242, 242);
+font-size: 30px;
+border: 2px solid rgb(4, 44, 86);
+width: fit-content;
+padding: 1%;
+background-color: rgb(25, 74, 60);
+}
+</style>
+
+</head>
+
+<body style="background-image:url(naksha.jpeg) ;background-repeat: no-repeat;background-size: cover;">
+ <div id="animal"> <h1>
+    YOUR WORLD</h1></div>
+    <div id="timer">10:00</div>
+    <script>
+      function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          submitQuiz();
+        }
+    }, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+   let timerDuration = 600;
+   let timerDisplay = document.getElementById('timer');
+   startTimer(timerDuration, timerDisplay);
+});</script>
+    
+  <div id="kingdom"><p>Q1.What is the capital city of France?
+    </p>
+    <form>
+        <input type="radio" name="Q1" value="Berlin" >
+        <label >Berlin</label><br>
+    
+        <input type="radio" name="Q1" value="Madrid" >
+        <label >Madrid</label><br>
+        <input type="radio" name="Q1" value="Rome"  >
+        <label >Rome</label><br>
+        <input type="radio"name="Q1" value="Paris"  >
+        <label >Paris</label><br>
+    </form>
+      <p>Q2.Who was the first President of the United States?
+    </p>
+      <form>  <input type="radio" name="Q2" value="Thomas Jefferson">
+        <label >Thomas Jefferson
+    </label><br>
+    
+        <input type="radio"  name="Q2" value="John Adams" >
+        <label> John Adams
+    </label><br>
+        <input type="radio"  name="Q2" value="James Madison" >
+        <label> James Madison
+    </label><br>
+        <input type="radio"  name="Q2" value="George Washington" >
+        <label> George Washington
+    </label><br></form>
+      <p> Q3.What is the chemical symbol for water?</p>
+      <form>
+        <input type="radio" name="Q3" value="O" >
+        <label > O</label><br>
+    
+        <input type="radio" name="Q3" value="W" >
+        <label >W</label><br>
+        <input type="radio"name="Q3" value="H2O"  >
+        <label >H2O</label><br>
+        <input type="radio" name="Q3" value="HO2" >
+        <label>HO2</label><br></form>
+      <p> Q4.Which festival is widely celebrated in India and marks the victory of light over darkness?
+    </p>
+        <form>
+    
+        <input type="radio" name="Q4" value="Christmas" >
+        <label>Christmas</label><br>
+    
+        <input type="radio" name="Q4" value="Hanukkah" >
+        <label >Hanukkah</label><br>
+        <input type="radio" name="Q4" value="Diwali" >
+        <label >Diwali</label><br>
+        <input type="radio" name="Q4" value=" Eid al-Fitr" >
+        <label > Eid al-Fitr
+    </label><br>
+                  </form>
+      <p> Q5.Which social media platform is known for its short-form video content and was at the forefront of influencing social media trends in 2024?
+    
+    </p>
+        <form>
+        <input type="radio" name="Q5" value="Twitter" >
+        <label>Twitter</label><br>
+    
+        <input type="radio" name="Q5" value="Instagram"  >
+        <label >Instagram</label><br>
+        <input type="radio" name="Q5" value="Facebook" >
+        <label >Facebook</label><br>
+        <input type="radio" name="Q5" value="Byte" >
+        <label >Byte</label><br>
+                  </form>
+      <p>Q6.In which year did the COVID-19 pandemic officially begin?
+    </p>
+        <form>
+        <input type="radio" name="Q6" value="2017" >
+        <label >2017</label><br>
+    
+        <input type="radio" name="Q6" value="2018"  >
+        <label >2018</label><br>
+        <input type="radio" name="Q6" value="2019" >
+        <label >2019</label><br>
+        <input type="radio" name="Q6" value="2020" >
+        <label >2020</label><br></form>
+      <p>Q7.Which sport is associated with Wimbledon?
+    </p>
+        <form>
+        <input type="radio" name="Q7" value="Soccer" >
+        <label>Soccer</label><br>
+    
+        <input type="radio" name="Q7" value="Tennis"  >
+        <label >Tennis</label><br>
+        <input type="radio" name="Q7" value="Golf" >
+        <label >Golf</label><br>
+        <input type="radio" name="Q7" value="Cricket" >
+        <label >Cricket</label><br></form>
+      <p>Q8.What is the primary greenhouse gas responsible for climate change?
+    </p>
+        <form>
+        <input type="radio" name="Q8" value="Nitrous Oxide " >
+        <label > Nitrous Oxide
+    </label><br>
+    
+        <input type="radio" name="Q8" value="Carbon Monoxide " >
+        <label > Carbon Monoxide
+    </label><br>
+        <input type="radio" name="Q8" value="Methane "  >
+        <label >Methane</label><br>
+        <input type="radio"name="Q8" value="Carbon Dioxide" >
+        <label > Carbon Dioxide
+    </label><br>
+    </form>
+      <p>Q9.What is the term for the total value of goods and services produced by a country in a specific time period?
+    </p>
+        <form>
+        <input type="radio" name="Q9" value="GDP (Gross Domestic Product)" >  
+         <label>GDP (Gross Domestic Product)
+    </label><br>
+    
+        <input type="radio" name="Q9" value="CPI (Consumer Price Index)">
+        <label > CPI (Consumer Price Index)
+    </label><br>
+        <input type="radio" name="Q9" value="ROI (Return on Investment)" >
+        <label > ROI (Return on Investment)
+    </label><br>
+        <input type="radio" name="Q9" value="GNP (Gross National Product)">
+        <label >GNP (Gross National Product)
+    </label><br></form>
+      <p> Q10.Which planet is known as the "Red Planet"?
+    </p>
+        <form>
+        <input type="radio" name="Q10" value="Venus">
+        <label >Venus</label><br>
+    
+        <input type="radio" name="Q10" value="Mars">
+        <label >Mars</label><br>
+        <input type="radio" name="Q10" value="Jupiter">
+        <label >Jupiter</label><br>
+        <input type="radio" name="Q10" value="Saturn">
+        <label >Saturn</label><br>
+        <button type="button" onclick="world()" id="submitBtn">submit</button>
+    </form>
+    <div id="result"></div>
+<script> 
+
+  
+  function world() {
+    let count = 0;
+
+const answers = {
+  Q1: "Paris",
+  Q2: "George Washington",
+  Q3: "H2O",
+  Q4: "Diwali",
+  Q5: "Byte",
+  Q6: "2019",
+  Q7: "Tennis",
+  Q8: "Carbon Dioxide",
+  Q9: "GDP (Gross Domestic Product)",
+  Q10: "Mars"
+};
+
+for (let i = 1; i <= Object.keys(answers).length; i++) {
+  const questionKey = "Q" + i;
+  const selectedAnswer = document.querySelector(`input[name=${questionKey}]:checked`);
+
+  if (selectedAnswer) {
+      const userAnswer = selectedAnswer.value.trim().toLowerCase();
+
+      if (userAnswer === answers[questionKey].toLowerCase()) {
+          count++;
+      }
+  }
+}
+
+// Display marks
+const resultElement = document.getElementById("result");
+resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
+sessionStorage.setItem('quizScore', count);
+
+// Redirect to the result page (if needed)
+window.location.href = "score.html";
+}</script>
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+<!--CSS Part-->
+<style>
+  *{
+      background-color: rgba(201, 159, 180, 1);
+  }
+  #animal{
+      background-color: rgba(26, 118, 147, 1);
+      border: 3px solid rgba(69, 10, 255, 1);
+  }
+  h1{
+      text-align: center;
+      font-size: 55px;
+      font-family: serif;
+      color: rgba(167, 52, 176, 1);
+  }
+  p{
+      font-weight: bold;
+      color :rgba(88, 2, 2, 1)
+  }
+  form{
+  color:rgba(0, 0, 0, 1);
+}
+#kingdom{
+  border: 2px solid rgba(243, 111, 21, 1);
+  padding: 4%;
+  margin-left: 20%;
+  margin-right: 20%;
+ 
+}
+#submitBtn{
+  float: right;
+  background-color: rgb(180, 201, 219);
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25%;
+  font-size: 20px;
+ 
+}
+
+#timer{
+  margin-left: 3%;
+  margin-top: 3%;
+  position: fixed;
+  color: rgb(188, 39, 176);
+  font-size: 30px;
+  border: 2px solid rgb(159, 76, 28);
+  width: fit-content;
+  padding: 1%;
+  background-color: rgb(189, 139, 181);
+}
+</style>
+
+</head>
+
+<body style="background-image:url(tree.jpeg) ;background-repeat: no-repeat;background-size: cover;">
+ <div id="animal"> <h1>
+  LIFE
+ </h1></div>
+ <div id="timer">10:00</div>
+ <script>
+  function startTimer(duration, display) {
+let timer = duration, minutes, seconds;
+setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      submitQuiz();
+    }
+}, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+let timerDuration = 600;
+let timerDisplay = document.getElementById('timer');
+startTimer(timerDuration, timerDisplay);
+});</script>
+    <HR>
+  <div id="kingdom">
+    <p>Q1. Can one find contentment in a life devoid of challenges or hardships?</p>
+    <form>
+      <input type="radio" name="Q1" value="Contentment is impossible without challenges">
+      <label>Contentment is impossible without challenges</label><br>
+      
+      <input type="radio" name="Q1" value="Contentment is achievable in a challenge-free life">
+      <label>Contentment is achievable in a challenge-free life</label><br>
+      
+      <input type="radio" name="Q1" value="Challenges are irrelevant to achieving contentment">
+      <label>Challenges are irrelevant to achieving contentment</label><br>
+      
+      <input type="radio" name="Q1" value="Contentment depends solely on external factors">
+      <label>Contentment depends solely on external factors</label><br>
+    </form>
+    
+    <p>Q2. Is life primarily driven by fate or free will?</p>
+    <form>
+      <input type="radio" name="Q2" value="Life is predetermined by fate">
+      <label>Life is predetermined by fate</label><br>
+      
+      <input type="radio" name="Q2" value="Life is a result of free will and choices">
+      <label>Life is a result of free will and choices</label><br>
+      
+      <input type="radio" name="Q2" value="Life is a combination of fate and free will">
+      <label>Life is a combination of fate and free will</label><br>
+      
+      <input type="radio" name="Q2" value="Human actions have no impact on life's course">
+      <label>Human actions have no impact on life's course</label><br>
+    </form>
+    
+    <p>Q3. Can one find happiness and contentment without material possessions or external achievements?</p>
+    <form>
+      <input type="radio" name="Q3" value="True happiness stems from material wealth">
+      <label>True happiness stems from material wealth</label><br>
+      
+      <input type="radio" name="Q3" value="Happiness is unrelated to possessions or achievements">
+      <label>Happiness is unrelated to possessions or achievements</label><br>
+      
+      <input type="radio" name="Q3" value="Happiness is solely derived from external accomplishments">
+      <label>Happiness is solely derived from external accomplishments</label><br>
+      
+      <input type="radio" name="Q3" value="Material possessions are essential for contentment">
+      <label>Material possessions are essential for contentment</label><br>
+    </form>
+    
+    <p>Q4. What role does self-awareness play in shaping our perception of life's meaning and purpose?</p>
+    <form>
+      <input type="radio" name="Q4" value="Self-awareness obstructs understanding life's purpose">
+      <label>Self-awareness obstructs understanding life's purpose</label><br>
+      
+      <input type="radio" name="Q4" value="Life's meaning is irrelevant to self-awareness">
+      <label>Life's meaning is irrelevant to self-awareness</label><br>
+      
+      <input type="radio" name="Q4" value="Self-awareness aids in discovering life's meaning">
+      <label>Self-awareness aids in discovering life's meaning</label><br>
+      
+      <input type="radio" name="Q4" value="Life's purpose is unrelated to self-reflection">
+      <label>Life's purpose is unrelated to self-reflection</label><br>
+    </form>
+    
+    <p>Q5. Which scientific discipline studies the origin, evolution, and behavior of living organisms?</p>
+    <form>
+      <input type="radio" name="Q5" value="Biology">
+      <label>Biology</label><br>
+      
+      <input type="radio" name="Q5" value="Chemistry">
+      <label>Chemistry</label><br>
+      
+      <input type="radio" name="Q5" value="Physics">
+      <label>Physics</label><br>
+      
+      <input type="radio" name="Q5" value="Physical">
+      <label>Physical</label><br>
+    </form>
+    
+    <p>Q6. Which of these is an example of an autotroph?</p>
+    <form>
+      <input type="radio" name="Q6" value="Lion">
+      <label>Lion</label><br>
+      
+      <input type="radio" name="Q6" value="Sunflower">
+      <label>Sunflower</label><br>
+      
+      <input type="radio" name="Q6" value="Dog">
+      <label>Dog</label><br>
+      
+      <input type="radio" name="Q6" value="Rabbit">
+      <label>Rabbit</label><br>
+    </form>
+    
+    <p>Q7. Is there a purpose or inherent meaning to life, or is it something individuals create for themselves?</p>
+    <form>
+      <input type="radio" name="Q7" value="Life has a predetermined purpose">
+      <label>Life has a predetermined purpose</label><br>
+      
+      <input type="radio" name="Q7" value="Life's meaning is individually crafted">
+      <label>Life's meaning is individually crafted</label><br>
+      
+      <input type="radio" name="Q7" value="Life is without any inherent meaning">
+      <label>Life is without any inherent meaning</label><br>
+      
+      <input type="radio" name="Q7" value="Life's purpose is defined by societal norms">
+      <label>Life's purpose is defined by societal norms</label><br>
+    </form>
+    
+    <p>Q8. Which philosopher is famously associated with the phrase "I think, therefore I am"?</p>
+    <form>
+      <input type="radio" name="Q8" value="Aristotle">
+      <label>Aristotle</label><br>
+      
+      <input type="radio" name="Q8" value="Immanuel Kant">
+      <label>Immanuel Kant</label><br>
+      
+      <input type="radio" name="Q8" value="Rene Descartes">
+      <label>Rene Descartes</label><br>
+      
+      <input type="radio" name="Q8" value="Friedrich Nietzsche">
+      <label>Friedrich Nietzsche</label><br>
+    </form>
+    
+    <p>Q9. What is the meaning of life?</p>
+    <form>
+      <input type="radio" name="Q9" value="Achieving happiness and success">
+      <label>Achieving happiness and success</label><br>
+      
+      <input type="radio" name="Q9" value="Fulfilling one's purpose and potential">
+      <label>Fulfilling one's purpose and potential</label><br>
+      
+      <input type="radio" name="Q9" value="Seeking knowledge and understanding">
+      <label>Seeking knowledge and understanding</label><br>
+      
+      <input type="radio" name="Q9" value="Subjective and varies for each individual">
+      <label>Subjective and varies for each individual</label><br>
+    </form>
+    
+    <p>Q10. What role does biodiversity play in maintaining life on our planet?</p>
+    <form>
+      <input type="radio" name="Q10" value="It has minimal impact on ecosystems">
+      <label>It has minimal impact on ecosystems</label><br>
+      
+      <input type="radio" name="Q10" value="It contributes to environmental imbalance">
+      <label>It contributes to environmental imbalance</label><br>
+      
+      <input type="radio" name="Q10" value="It ensures ecological stability and resilience">
+      <label>It ensures ecological stability and resilience</label><br>
+      
+      <input type="radio" name="Q10" value="It only affects specific habitats">
+      <label>It only affects specific habitats</label><br>
+    
+
+              <button type="button" onclick="life()" id="submitBtn">submit</button>
+
+            </form>
+            
+           <div id="result"></div>
+          <script>
+            
+            
+            function life() {
+              let count = 0;
+          
+          const answers = {
+            Q1: "Contentment is impossible without challenges",
+  Q2: "Life is a combination of fate and free will",
+  Q3: "Happiness is unrelated to possessions or achievements",
+  Q4: "Self-awareness aids in discovering life's meaning",
+  Q5: "Biology",
+  Q6: "Sunflower",
+  Q7: "Life's meaning is individually crafted",
+  Q8: "Rene Descartes",
+  Q9: "Subjective and varies for each individual",
+  Q10: "It ensures ecological stability and resilience"
+          };
+          
+          for (let i = 1; i <= Object.keys(answers).length; i++) {
+            const questionKey = "Q" + i;
+            const selectedAnswer = document.querySelector(`input[name=${questionKey}]:checked`);
+          
+            if (selectedAnswer) {
+                const userAnswer = selectedAnswer.value.trim().toLowerCase();
+          
+                if (userAnswer === answers[questionKey].toLowerCase()) {
+                    count++;
+                }
+            }
+          }
+          
+          // Display marks
+          const resultElement = document.getElementById("result");
+          resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
+          sessionStorage.setItem('quizScore', count);
+          
+          // Redirect to the result page (if needed)
+          window.location.href = "score3.html";
+          }</script>
+</body>
+
+</html>

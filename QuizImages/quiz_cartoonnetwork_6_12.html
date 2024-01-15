@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>cartoon network</title>
+<!--CSS Part-->
+<style>
+  *{
+      background-color: rgb(158, 121, 57);
+  }
+  #animal{
+      background-color: rgb(70, 60, 85);
+      border: 3px solid  rgb(6, 40, 79);
+  }
+  h1{
+      text-align: center;
+      font-size: 55px;
+      font-family: serif;
+      color: rgb(0, 0, 0);
+  }
+  p{
+      font-weight: bold;
+      color: rgb(2, 39, 71);
+     
+  }
+  form{
+  color: rgb(15, 27, 37);
+}
+#kingdom{
+  border: 2px solid rgb(6, 40, 79);
+  padding: 4%;
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  
+}
+#submitBtn{
+  float: right;
+  background-color: rgb(180, 201, 219);
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25%;
+  font-size: 20px;
+ 
+}
+
+#timer{
+  margin-left: 3%;
+  margin-top: 3%;
+  position: fixed;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  border: 2px solid rgb(4, 44, 86);
+  width: fit-content;
+  padding: 1%;
+  background-color: rgb(81, 61, 90);
+}
+</style>
+
+</head>
+
+<body style="background-image:url(cartoons.jpeg) ;background-repeat: no-repeat;background-size: cover;">
+ <div id="animal"> <h1>
+    CARTOON NETWORK</h1></div>
+    <div id="timer">10:00</div>
+    <script>
+      function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          submitQuiz();
+        }
+    }, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+   let timerDuration = 600;
+   let timerDisplay = document.getElementById('timer');
+   startTimer(timerDuration, timerDisplay);
+});</script>
+    
+  <div id="kingdom"><p>Q1. What is the name of the famous sponge who lives in a pineapple under the sea?</p>
+    <form>
+      <input type="radio" name="Q1" value="Homer Simpson">
+      <label>Homer Simpson</label><br>
+      
+      <input type="radio" name="Q1" value="Patrick Star">
+      <label>Patrick Star</label><br>
+      
+      <input type="radio" name="Q1" value="SpongeBob SquarePants">
+      <label>SpongeBob SquarePants</label><br>
+      
+      <input type="radio" name="Q1" value="Bugs Bunny">
+      <label>Bugs Bunny</label><br>
+    </form>
+    
+    <p>Q2. Which show follows the adventures of a boy genius and his dysfunctional family?</p>
+    <form>
+      <input type="radio" name="Q2" value="Dexter's Laboratory">
+      <label>Dexter's Laboratory</label><br>
+      
+      <input type="radio" name="Q2" value="Teen Titans Go!">
+      <label>Teen Titans Go!</label><br>
+      
+      <input type="radio" name="Q2" value="The Powerpuff Girls">
+      <label>The Powerpuff Girls</label><br>
+      
+      <input type="radio" name="Q2" value="Ed, Edd n Eddy">
+      <label>Ed, Edd n Eddy</label><br>
+    </form>
+    
+    <p>Q3. What's the name of the show about a group of girls with superpowers created by a scientist?</p>
+    <form>
+      <input type="radio" name="Q3" value="My Little Pony">
+      <label>My Little Pony</label><br>
+      
+      <input type="radio" name="Q3" value="The Powerpuff Girls">
+      <label>The Powerpuff Girls</label><br>
+      
+      <input type="radio" name="Q3" value="Scooby-Doo">
+      <label>Scooby-Doo</label><br>
+      
+      <input type="radio" name="Q3" value="Tom and Jerry">
+      <label>Tom and Jerry</label><br>
+    </form>
+    
+    <p>Q4. What's the name of the show featuring a boy named Finn and his magical dog, Jake?</p>
+    <form>
+      <input type="radio" name="Q4" value="Adventure Time">
+      <label>Adventure Time</label><br>
+      
+      <input type="radio" name="Q4" value="Regular Show">
+      <label>Regular Show</label><br>
+      
+      <input type="radio" name="Q4" value="Ben 10">
+      <label>Ben 10</label><br>
+      
+      <input type="radio" name="Q4" value="Gumball">
+      <label>Gumball</label><br>
+    </form>
+    
+    <p>Q5. What is the name of the show about a young boy who can transform into different alien creatures?</p>
+    <form>
+      <input type="radio" name="Q5" value="Ben 10">
+      <label>Ben 10</label><br>
+      
+      <input type="radio" name="Q5" value="Pokemon">
+      <label>Pokemon</label><br>
+      
+      <input type="radio" name="Q5" value="Steven Universe">
+      <label>Steven Universe</label><br>
+      
+      <input type="radio" name="Q5" value="Sonic X">
+      <label>Sonic X</label><br>
+    </form>
+    
+    <p>Q6. What's the name of the show featuring a boy with a talking goldfish and his friends in a suburban setting?</p>
+    <form>
+      <input type="radio" name="Q6" value="Johnny Bravo">
+      <label>Johnny Bravo</label><br>
+      
+      <input type="radio" name="Q6" value="Mike, Lu & Og">
+      <label>Mike, Lu & Og</label><br>
+      
+      <input type="radio" name="Q6" value="The Amazing World of Gumball">
+      <label>The Amazing World of Gumball</label><br>
+      
+      <input type="radio" name="Q6" value="Ed, Edd n Eddy">
+      <label>Ed, Edd n Eddy</label><br>
+    </form>
+    
+    <p>Q7. What's the name of the show about a boy who possesses a magical notebook that can make things he draws come to life?</p>
+    <form>
+      <input type="radio" name="Q7" value="Codename: Kids Next Door">
+      <label>Codename: Kids Next Door</label><br>
+      
+      <input type="radio" name="Q7" value="Foster's Home for Imaginary Friends">
+      <label>Foster's Home for Imaginary Friends</label><br>
+      
+      <input type="radio" name="Q7" value="Chowder">
+      <label>Chowder</label><br>
+      
+      <input type="radio" name="Q7" value="ChalkZone">
+      <label>ChalkZone</label><br>
+    </form>
+    
+    <p>Q8. What's the name of the show about a group of aliens who come to Earth and try to fit in with humans?</p>
+    <form>
+      <input type="radio" name="Q8" value="We Bare Bears">
+      <label>We Bare Bears</label><br>
+      
+      <input type="radio" name="Q8" value="Teen Titans Go!">
+      <label>Teen Titans Go!</label><br>
+      
+      <input type="radio" name="Q8" value="Regular Show">
+      <label>Regular Show</label><br>
+      
+      <input type="radio" name="Q8" value="Alien X">
+      <label>Alien X</label><br>
+    </form>
+    
+    <p>Q9. What's the name of the show about a boy and his talking dog who solve mysteries together?</p>
+    <form>
+      <input type="radio" name="Q9" value="Clarence">
+      <label>Clarence</label><br>
+      
+      <input type="radio" name="Q9" value="Uncle Grandpa">
+      <label>Uncle Grandpa</label><br>
+      
+      <input type="radio" name="Q9" value="Scooby-Doo">
+      <label>Scooby-Doo</label><br>
+      
+      <input type="radio" name="Q9" value="Courage the Cowardly Dog">
+      <label>Courage the Cowardly Dog</label><br>
+    </form>
+    
+    <p>Q10. What's the name of the show about a group of kids who operate as a team fighting off evil adults?</p>
+    <form>
+      <input type="radio" name="Q10" value="The Grim Adventures of Billy & Mandy">
+      <label>The Grim Adventures of Billy & Mandy</label><br>
+      <input type="radio" name="Q10" value="Krypto the Superdog">
+      <label>Krypto the Superdog</label><br>
+      
+      <input type="radio" name="Q10" value="Code Lyoko">
+      <label>Code Lyoko</label><br>
+      
+      <input type="radio" name="Q10" value="Codename: Kids Next Door">
+      <label>Codename: Kids Next Door</label><br>
+      <button type="button" onclick="cartoon()" id="submitBtn">submit</button>
+    </form>
+  <div id="result"></div>
+
+  <script> 
+    
+    
+    function cartoon() {
+      let count = 0;
+  
+  const answers = {
+    Q1: "SpongeBob SquarePants",
+  Q2: "Dexter's Laboratory",
+  Q3: "The Powerpuff Girls",
+  Q4: "Adventure Time",
+  Q5: "Ben 10",
+  Q6: "The Amazing World of Gumball",
+  Q7: "ChalkZone",
+  Q8: "We Bare Bears",
+  Q9: "Scooby-Doo",
+  Q10: "Codename: Kids Next Door"
+};
+  
+  for (let i = 1; i <= Object.keys(answers).length; i++) {
+    const questionKey = "Q" + i;
+    const selectedAnswer = document.querySelector(`input[name=${questionKey}]:checked`);
+  
+    if (selectedAnswer) {
+        const userAnswer = selectedAnswer.value.trim().toLowerCase();
+  
+        if (userAnswer === answers[questionKey].toLowerCase()) {
+            count++;
+        }
+    }
+  }
+  
+  // Display marks
+  const resultElement = document.getElementById("result");
+  resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
+  sessionStorage.setItem('quizScore', count);
+  
+  // Redirect to the result page (if needed)
+  window.location.href = "score.html";
+  }</script>
+</body>
+
+</html>

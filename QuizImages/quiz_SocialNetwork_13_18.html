@@ -1,0 +1,289 @@
+                 <!-- 
+                 Online HTML, CSS and JavaScript editor to run code online.
+                 -->
+                 <!DOCTYPE html>
+                 <html lang="en">
+
+                 <head>
+                   <meta charset="UTF-8" />
+                   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                   <link rel="stylesheet" href="style.css" />
+                   <title>social media</title>
+                   <style>
+
+                     *{
+                         background-color: rgb(82, 101, 225);
+                     }
+                     #animal{
+                         background-color: rgb(14, 211, 255);
+                         border: 3px solid  rgb(0, 0, 0);
+                     }
+                     h1{
+                         text-align: center;
+                         font-size: 55px;
+                         font-family: serif;
+                         color: rgb(171, 200, 209);
+                     }
+                     p{
+                         font-weight: bold;
+                         color: rgb(180, 219, 252);
+
+                     }
+                     form{
+                     color: aliceblue;
+                   }
+                   #kingdom{
+                     border: 2px solid rgb(0, 0, 0);
+                     padding: 4%;
+                     margin-top: 2%;
+                     margin-left: 20%;
+                     margin-right: 20%;
+
+                   }
+                   #submitBtn{
+                    float: right;
+  background-color: rgb(180, 201, 219);
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25%;
+  font-size: 20px;
+
+                   }
+
+                   #timer{
+                     margin-left: 3%;
+                     margin-top: 3%;
+                     position: fixed;
+                     color: rgb(251, 250, 250);
+                     font-size: 30px;
+                     border: 2px solid rgb(4, 44, 86);
+                     width: fit-content;
+                     padding: 1%;
+                     background-color: rgb(73, 19, 190);
+                   }
+                   </style>
+
+
+                 </head>
+
+                 <body style="background-image:url(socials.jpeg) ;background-repeat: no-repeat;background-size: cover;">
+                  <div id="animal"> <h1>
+                     SOCIAL MEDIA</h1></div>
+                     <div id="timer">10:00</div>
+                     <script>
+                       function startTimer(duration, display) {
+                     let timer = duration, minutes, seconds;
+                     setInterval(function () {
+                         minutes = parseInt(timer / 60, 10);
+                         seconds = parseInt(timer % 60, 10);
+
+                         minutes = minutes < 10 ? "0" + minutes : minutes;
+                         seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                         display.textContent = minutes + ":" + seconds;
+
+                         if (--timer < 0) {
+                           submitQuiz();
+                         }
+                     }, 1000);
+                 }
+
+                 document.addEventListener("DOMContentLoaded", function () {
+                    let timerDuration = 600;
+                    let timerDisplay = document.getElementById('timer');
+                    startTimer(timerDuration, timerDisplay);
+                 });</script>
+                       <div id="kingdom">
+                   <HR>
+                   <p>Q1. Which of the following is NOT a popular social media platform</p>
+                   <form>
+                     <input type="radio" name="Q1" value="Facebook">
+                       <lable> Facebook
+                        </lable><br>
+                           <input type="radio" name="Q1" value="Twitter">
+                        <lable>  Twitter
+                         </lable><br>
+                 <input type="radio" name="Q1" value="LinkedIn">
+                        <lable>LinkedIn</lable><br>
+                   <input type="radio" name="Q1" value="PlayStation">
+                        <lable>PlayStation</lable><br>
+                   </form>
+                   <p>Q2.What is the primary purpose of a social network?
+                 </p>
+                     <form>
+                       <input type="radio" name="Q2" value="Sharing memes">
+                         <lable>Sharing memes
+                           </lable><br>
+                         <input type="radio" name="Q2" value="Connecting and interacting with others">
+                         <label>   Connecting and interacting with others
+                            </lable><br>
+                           <input type="radio" name="Q2" value="Playing games">
+                         <lable>  Playing games
+                            </lable><br>
+                             <input type="radio" name="Q2" value="Online shopping">
+                               <lable>  Online shopping</lable><br>
+                               </form>
+                   <p> Q3.Which social media platform is known for sharing short video clips?</p>
+                 <form>
+                 <input type="radio" name="Q3" value="Instagram">
+                 <lable> Instagram
+                    </lable><br>
+                         <input type="radio" name="Q3" value="Snapchat">
+                         <lable> Snapchat
+                            </lable><br>
+                           <input type="radio" name="Q3" value="TikTok">
+                         <lable> TikTok
+                            </lable><br>
+                             <input type="radio"name="Q3" value="Pinterest">
+                               <lable> Pinterest</lable><br>
+                               </form>
+                   <p> Q4.What does the term "DM" commonly refer to in social media?</p>
+                      <form>
+                       <input type="radio" name="Q4" value="Direct Message">
+                         <lable>Direct Message
+                          </lable><br>
+                         <input type="radio" name="Q4" value="Digital Media">
+                         <lable>  Digital Media
+                            </lable><br>
+                           <input type="radio" name="Q4" value="Dedicated Messaging">
+                         <lable> Dedicated Messaging
+                             </lable><br>
+                             <input type="radio" name="Q4" value="Display Mode">
+                               <lable>Display Mode</lable><br>
+                               </form>
+                   <p> Q5.Which social network is most associated with professional networking and job searching?</p>
+                        <form>
+                         <input type="radio" name="Q5" value="Facebook">
+                         <lable> Facebook
+                          </lable><br>
+                             <input type="radio" name="Q5" value="Twitter">
+                          <lable>  Twitter
+                           </lable><br>
+                   <input type="radio" name="Q5" value="LinkedIn">
+                          <lable>LinkedIn</lable><br>
+                             <input type="radio" name="Q5" value="Whatsapp">
+                               <lable>Whatsapp</lable><br>
+                               </form>
+                   <p>Q6.Which platform is known for its disappearing photo and video messages?</p>
+                                <form>
+                                 <input type="radio" name="Q6" value="LinkedIn">
+                                 <lable>LinkedIn</lable><br>
+                                    <input type="radio" name="Q6" value="Whatsapp">
+                                      <lable>Whatsapp</lable><br>
+                                      <input type="radio" name="Q6" value="Snapchat">
+                                      <lable> Snapchat
+                                         </lable><br>
+                                        <input type="radio" name="Q6" value="TikTok">
+                                      <lable> TikTok
+                                         </lable><br>
+                   <p>Q7.What is a "hashtag" used for in social media?</p>
+                                <form>
+                       <input type="radio" name="Q7" value="Tagging friends in posts">
+                         <lable>Tagging friends in posts
+                          </lable><br>
+                         <input type="radio" name="Q7" value="Identifying a topic or theme">
+                         <lable>  Identifying a topic or theme
+                           </lable><br>
+                           <input type="radio" name="Q7" value="Sending private messages">
+                         <lable> Sending private messages
+                          </lable><br>
+                             <input type="radio" name="Q7" value="Creating polls">
+                               <lable> Creating polls</lable><br>
+                               </form>
+                   <p>Q8.What is the main purpose of an algorithm on social media platforms?</p>
+                                <form>
+                       <input type="radio" name="Q8" value="To restrict user access">
+                         <lable> To restrict user access
+                           </lable><br>
+                         <input type="radio" name="Q8" value="To sort and display content">
+                         <lable> To sort and display content
+                         </lable><br>
+                           <input type="radio" name="Q8" value="To delete inactive accounts">
+                         <lable>  To delete inactive accounts
+                         </lable><br>
+                             <input type="radio" name="Q8" value=" To create new features">
+                               <lable> To create new features </lable><br>
+                               </form>
+
+                   <p>Q9.Which social media feature allows users to publicly show their approval of a post?
+                 </p>
+                                <form>
+                       <input type="radio" name="Q9" value="Likes">
+                         <lable>Likes
+
+                          </lable><br>
+                         <input type="radio" name="Q9" value="Shares">
+                         <lable>  Shares
+
+                          </lable><br>
+                           <input type="radio" name="Q9" value="Comments">
+                         <lable>  Comments
+
+                          </lable><br>
+                             <input type="radio"name="Q9" value="Tags">
+                               <lable>   Tags</lable><br>
+                               </form>
+                   <p> Q10.Which platform is more text-based and limited to short messages or "tweets"?</p>
+                                <form>
+                       <input type="radio" name="Q10" value="Facebook">
+                         <lable> Facebook
+
+                           </lable><br>
+                         <input type="radio" name="Q10" value="Instagram">
+                         <lable>  Instagram
+
+                          </lable><br>
+                           <input type="radio" name="Q10" value="Twitter">
+                         <lable> Twitter
+
+                           </lable><br>
+                             <input type="radio" name="Q10" value="Pinterest">
+                               <lable>  Pinterest</lable><br>
+                               <button type="button" onclick="social()" id="submitBtn">submit</button>
+                               </form>
+                              <div id="result"></div>
+
+                   <script>
+
+
+
+                   function social() {
+                     let count = 0;
+
+                 const answers = {
+                   Q1: "PlayStation",
+                   Q2: "Connecting and interacting with others",
+                   Q3: "TikTok",
+                   Q4: "Direct Message",
+                   Q5: "LinkedIn",
+                   Q6: "Snapchat",
+                   Q7: "Identifying a topic or theme",
+                   Q8: "To sort and display content",
+                   Q9: "Likes",
+                   Q10: "Twitter"
+                 };
+                 for (let i = 1; i <= Object.keys(answers).length; i++) {
+                     const questionKey = "Q" + i;
+                     const selectedAnswer = document.querySelector(`input[name=${questionKey}]:checked`);
+
+                     if (selectedAnswer) {
+                         const userAnswer = selectedAnswer.value.trim().toLowerCase();
+
+                         if (userAnswer === answers[questionKey].toLowerCase()) {
+                             count++;
+                         }
+                     }
+                 }
+
+                 // Display marks
+                 const resultElement = document.getElementById("result");
+                 resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
+                 sessionStorage.setItem('quizScore', count);
+
+                 // Redirect to the result page (if needed)
+                 window.location.href = "score2.html";
+                   }</script>
+
+                 </body>
+
+                 </html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-O_6_12_age</title>
+    <style>
+       
+        #heading{
+            border: 4px solid blue;
+            padding: 2%;
+            background-color: rgb(124, 180, 249);
+        }
+        h3{
+           text-align: left;
+           font-size: 30px;
+           margin-top: 0.5%;
+        }
+       #heads{
+            text-align: center;
+            font-size: 50px;
+            
+        }
+        #topics{
+         border: 2px solid blue;
+         background-color: rgb(162, 247, 255);
+        }
+
+        /*topics*/
+      
+    #box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.topic {
+    flex-basis: 30%; 
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.image {
+    border: 2px solid rgb(91, 91, 106);
+    margin: 5%;
+     width: 400px;
+     height: 260px;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 0;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+.zoom{
+   height: 260px;
+   width: 400px;
+   transition: transform .3s ease;
+}
+.zoom:hover{
+   transform: scale(1.1);
+}
+
+
+    </style>
+</head>
+<body>
+<!--Head part-->
+    <div id="heading">
+      <h3 id="greeting"> Hello </h3>
+      <script>
+         const urlParams = new URLSearchParams(window.location.search);
+         const name = urlParams.get('name');
+         if (name) {
+            const greetingElement = document.getElementById('greeting');
+                 greetingElement.innerHTML = `Welcome, ${name}!<br>
+                      Let's dive into an exciting quiz adventure. Choose your topic below.`;
+              }
+      </script>
+      <div id="topics">
+        <h1 id="heads">Topics</h1>
+      </div>
+      </div>
+<!--image part-->
+    
+    <div id="box">
+      
+      <div class="topic">
+      <h2>Life</h2>
+     <div class="image">
+      <img src="life.jpeg" alt="Life" height="260px" width="400px" class="zoom" onclick="openLifeQuiz()">
+   </div>
+        <p>Reflect on the essence of existence, exploring the intricacies, diversity, and wonders of life itself, from the microscopic to the cosmic.</p>
+     </div>
+     <script>
+      function openLifeQuiz(){
+             window.location.href='quiz_life_19_above.html';
+      }
+     </script>
+    
+
+     <div class="topic">
+     <h2>Practical Doctors</h2>
+     <div class="image">
+      <img src="PracticalDoctors.jpeg" alt="PracticalDoctors" height="260px" width="400px" class="zoom" onclick="openPracticalDoctorsQuiz()">
+   </div>
+      <p>Engage in medical knowledge and practical wisdom, exploring the insights and innovations in the realm of healthcare.</p>
+   </div>
+   <script>
+      function openPracticalDoctorsQuiz(){
+             window.location.href='quiz_PracticalDoctors_19_above.html';
+      }
+     </script>
+
+      <div class="topic">
+     <h2>Ancient World</h2>
+     <div class="image">
+      <img src="AncientWorld.jpeg" alt="AncientWorld" height="260px" width="400px" class="zoom" onclick="openAncientWorldQuiz()">
+   </div>
+      <p>Journey back in time to unravel the mysteries and civilizations that shaped history, exploring the wonders of antiquity.</p>
+    </div>
+    <script>
+      function openAncientWorldQuiz(){
+             window.location.href='quiz_AncientWorld_19_above.html';
+      }
+     </script>
+
+      <div class="topic">
+     <h2>Foodie Corner</h2>
+     <div class="image">
+      <img src="FoodieCorner.jpeg" alt="FoodieCorner" height="260px" width="400px" class="zoom" onclick="openFoodieCornerQuiz()">
+   </div>
+      <p>Indulge your senses in a culinary adventure, celebrating flavors, recipes, and the rich cultural tapestry woven by diverse cuisines.</p>
+  </div>
+  <script>
+   function openFoodieCornerQuiz(){
+          window.location.href='quiz_FoodieCorner_19_above.html';
+   }
+  </script>
+
+      <div class="topic">
+     <h2>Water World</h2>
+     <div class="image">
+      <img src="WaterWorld.jpeg" alt="WaterWorld" height="260px" width="400px" class="zoom" onclick="openWaterWorldQuiz()">
+   </div>
+      <p>Dive into a realm of aquatic wonders, exploring oceans, rivers, and the diverse ecosystems thriving beneath the surface.</p>
+     </div>
+     <script>
+      function openWaterWorldQuiz(){
+             window.location.href='quiz_WaterWorld_19_above.html';
+      }
+     </script>
+
+      <div class="topic">
+     <h2>Film City</h2>
+     <div class="image">
+      <img src="FilmCity.jpeg" alt="FilmCity" height="260px" width="400px" class="zoom" onclick="openFilmCityQuiz()">
+   </div>
+      <p> Step into the magical realm where imagination meets reality, exploring the vibrant world of cinema and its captivating behind-the-scenes.</p>
+    </div>
+    <script>
+      function openFilmCityQuiz(){
+             window.location.href='quiz_FilmCity_19_above.html';
+      }
+     </script>
+
+    </div>
+
+</body>
+</html>
