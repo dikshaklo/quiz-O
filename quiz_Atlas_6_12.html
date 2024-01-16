@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>atlas</title>
+<!--CSS Part-->
+<style>
+  *{
+      background-color: rgb(82, 72, 42);
+  }
+  #animal{
+      background-color: rgb(176, 182, 119);
+      opacity: 0.7;
+      border: 3px solid  rgb(6, 40, 79);
+  }
+  h1{
+      text-align: center;
+      font-size: 55px;
+      font-family: serif;
+      color: rgb(0, 0, 0);
+  }
+  p{
+      font-weight: bold;
+      color: rgb(215, 214, 145);
+     
+  }
+  form{
+  color: aliceblue;
+}
+#kingdom{
+  border: 2px solid rgb(6, 40, 79);
+  padding: 4%;
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  
+}
+#submitBtn{
+  float: right;
+  background-color: rgb(180, 201, 219);
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25%;
+  font-size: 20px;
+}
+
+#timer{
+  margin-left: 3%;
+  margin-top: 3%;
+  position: fixed;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  border: 2px solid rgb(4, 44, 86);
+  width: fit-content;
+  padding: 1%;
+  background-color: rgb(67, 68, 47);
+}
+</style>
+
+</head>
+
+<body style="background-image:url(map.jpeg) ;background-repeat: no-repeat;background-size: cover;">
+ <div id="animal"> <h1>
+    ATLAS</h1></div>
+    <div id="timer">10:00</div>
+    <script>
+      function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          atlas();
+        }
+    }, 1000);
+   
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+   let timerDuration = 600;
+   let timerDisplay = document.getElementById('timer');
+   startTimer(timerDuration, timerDisplay);
+});
+let attempt = JSON.parse(localStorage.getItem("AnimalKingdom")) // code by Prem
+
+if(!attempt){// code by prem
+  window.location.href = "quiz_AnimalKingdom_6_12.html"// code by prem
+}// code by prem</script>
+  <div id="kingdom"><p>Q1.What is a book of maps called?</p>
+    <form>
+    <input type="radio" name="Q1" value="Dictionary">
+    <label>Dictionary</label><br>
+    
+    <input type="radio" name="Q1" value="Atlas">
+    <label>Atlas</label><br>
+    <input type="radio" name="Q1" value="Encyclopedia">
+    <label>Encyclopedia</label><br>
+    <input type="radio" name="Q1" value="Novel">
+    <label>Novel</label><br></form>
+ <p> Q2. What does an atlas help us to explore and understand?</p> 
+    <form>
+    <input type="radio" name="Q2" value="Weather">
+    <label>Weather</label><br>
+    
+    <input type="radio" name="Q2" value="History">
+    <label>History</label><br>
+    <input type="radio" name="Q2" value="Mathematics">
+
+    <label>Mathematics</label><br>
+    <input type="radio" name="Q2" value="Maps">
+    <label>Maps</label><br></form>
+    <p> Q3.  Which part of an atlas shows the cardinal directions?</p>
+    <form>
+    <input type="radio" name="Q3" value="Index">
+    <label>Index</label><br>
+    
+    <input type="radio" name="Q3" value="Legend">
+    <label>Legend</label><br>
+    <input type="radio" name="Q3" value="Compass Rose">
+    <label>Compass Rose</label><br>
+    <input type="radio" name="Q3" value="Globe">
+    <label>Globe</label><br></form>
+    <p> Q4.What does a scale on a map or atlas help us to measure?</p>
+    <form>
+    <input type="radio" name="Q4" value="Distance">
+    <label>Distance</label><br>
+    
+    <input type="radio" name="Q4" value="Weight">
+    <label>Weight</label><br>
+    <input type="radio" name="Q4" value="Time">
+    <label>Time</label><br>
+    <input type="radio" name="Q4" value="Volume">
+    <label>Volume</label><br></form>
+    <p> Q5.Which of these might you find in the index of an atlas?</p>
+    <form>
+    <input type="radio" name="Q5" value="A list of mountains">
+    <label>A list of mountains</label><br>
+    
+    <input type="radio" name="Q5" value="A collection of poems">
+    <label>A collection of poems</label><br>
+    <input type="radio" name="Q5" value="Recipes for cooking">
+    <label>Recipes for cooking</label><br>
+    <input type="radio" name="Q5" value="Names of planets">
+    <label>Names of planets</label><br></form>
+    <p> Q6.  What is the purpose of the legend/key in an atlas?</p>
+    <form>
+    <input type="radio" name="Q6" value="To show distances between places">
+    <label>To show distances between places</label><br>
+    
+    <input type="radio" name="Q6" value="To indicate important landmarks">
+    <label>To indicate important landmarks</label><br>
+    <input type="radio" name="Q6" value="To explain symbols and colors used on the map">
+    <label>To explain symbols and colors used on the map</label><br>
+    <input type="radio" name="Q6" value="To tell stories about places">
+    <label>To tell stories about places</label><br></form>
+    <p> Q7.  What kind of information might you find on a physical map in an atlas?</p>
+    <form>
+    <input type="radio" name="Q7" value="Population of cities">
+    <label>Population of cities</label><br>
+    
+    <input type="radio" name="Q7" value="Population boundries">
+    <label>Political boundaries</label><br>
+    <input type="radio" name="Q7" value="Types of landforms and elevation">
+    <label>Types of landforms and elevation</label><br>
+    <input type="radio" name="Q7" value="Climate information">
+    <label>Climate information</label><br></form>
+    <p> Q8.   Which map would you look at to find the names of countries and their capitals?</p>
+    <form>
+    <input type="radio" name="Q8" value="Road map">
+    <label>Road map</label><br>
+    
+    <input type="radio" name="Q8" value="Political map">
+    <label>Political map</label><br>
+    <input type="radio" name="Q8" value="Weather map">
+    <label>Weather map</label><br>
+    <input type="radio" name="Q8" value="Historical map">
+    <label>Historical map</label><br></form>
+    <p> Q9.  What do contour lines on a map in an atlas show?</p>
+    <form>
+    <input type="radio" name="Q9" value="Rivers and lakes">
+    <label>Rivers and lakes</label><br>
+    
+    <input type="radio" name="Q9" value="High and low areas of land">
+    <label>High and low areas of land</label><br>
+    <input type="radio" name="Q9" value="Border lines between countries">
+    <label>Border lines between countries</label><br>
+    <input type="radio" name="Q9" value="Political divisions">
+    <label>Political divisions</label><br></form>
+    <p> Q10.What kind of map might you use to plan a road trip?</p>
+    <form>
+    <input type="radio" name="Q10" value="Physical map">
+    <label>Physical map</label><br>
+    
+    <input type="radio" name="Q10"value="Road map">
+    <label>Road map</label><br>
+    <input type="radio" name="Q10" value="Historical map">
+    <label>Historical map</label><br>
+    <input type="radio" name="Q10" value="Political map">
+    <label>Political map</label><br>
+    <button type="button" onclick="atlas()" id="submitBtn">submit</button>
+</form>
+<div id="result"></div>
+
+   
+  
+  <script > 
+    
+    
+    function atlas() {
+     
+      let count = 0;
+
+const answers = {
+  Q1: "Atlas",
+  Q2: "Maps",
+  Q3: "Compass Rose",
+  Q4: "Distance",
+  Q5: "A list of mountains",
+  Q6: "To explain symbols and colors used on the map",
+  Q7: "Types of landforms and elevation",
+  Q8: "Political map",
+  Q9: "High and low areas of land",
+  Q10: "Road map"
+};
+
+for (let i = 1; i <= Object.keys(answers).length; i++) {
+    const questionKey = "Q" + i;
+    const selectedAnswer = document.querySelector(`input[name=${questionKey}]:checked`);
+
+    if (selectedAnswer) {
+        const userAnswer = selectedAnswer.value.trim().toLowerCase();
+
+        if (userAnswer === answers[questionKey].toLowerCase()) {
+            count++;
+        }
+    }
+}
+
+// Display marks
+const resultElement = document.getElementById("result");
+resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
+sessionStorage.setItem('quizScore', count);
+localStorage.setItem('Atlas', count >= 7? true: false)// code by prem
+
+// Redirect to the result page (if needed)
+window.location.href = "score.html";
+}</script>
+</body>
+
+</html>

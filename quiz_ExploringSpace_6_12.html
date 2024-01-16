@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>space exploring</title>
+<!--CSS Part-->
+<style>
+  *{
+      background-color: rgb(0, 0, 0);
+  }
+  #animal{
+      background-color: rgb(135, 163, 169);
+      opacity: 0.7;
+      border: 3px solid  rgb(6, 40, 79);
+  }
+  h1{
+      text-align: center;
+      font-size: 55px;
+      font-family: serif;
+      color: rgb(171, 200, 209);
+  }
+  p{
+      font-weight: bold;
+      color: rgb(180, 219, 252);
+     
+  }
+  form{
+  color: aliceblue;
+}
+#kingdom{
+  border: 2px solid rgb(6, 40, 79);
+  padding: 4%;
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  
+}
+#submitBtn{
+  float: right;
+  background-color: rgb(180, 201, 219);
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25%;
+  font-size: 20px;
+ 
+}
+
+#timer{
+  margin-left: 3%;
+  margin-top: 3%;
+  position: fixed;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  border: 2px solid rgb(4, 44, 86);
+  width: fit-content;
+  padding: 1%;
+  background-color: rgb(173, 183, 190);
+}
+</style>
+
+</head>
+
+<body style="background-image:url(galaxy.jpeg) ;background-repeat: no-repeat;background-size: cover;">
+ <div id="animal"> <h1>
+    EXPLORING SPACE</h1></div>
+    <div id="timer">10:00</div>
+    <script>
+      function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          space();
+        }
+    }, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+   let timerDuration = 600;
+   let timerDisplay = document.getElementById('timer');
+   startTimer(timerDuration, timerDisplay);
+});</script>
+    
+  <div id="kingdom"><p>Q1. What is the closest celestial body to Earth?</p>
+    <form>
+      <input type="radio" name="Q1" value="The Sun">
+      <label>The Sun</label><br>
+      
+      <input type="radio" name="Q1" value="The Moon">
+      <label>The Moon</label><br>
+      
+      <input type="radio" name="Q1" value="Venus">
+      <label>Venus</label><br>
+      
+      <input type="radio" name="Q1" value="Mars">
+      <label>Mars</label><br>
+    </form>
+    
+    <p>Q2. Which planet is known as the "Red Planet"?</p>
+    <form>
+      <input type="radio" name="Q2" value="Earth">
+      <label>Earth</label><br>
+      
+      <input type="radio" name="Q2" value="Mercury">
+      <label>Mercury</label><br>
+      
+      <input type="radio" name="Q2" value="Mars">
+      <label>Mars</label><br>
+      
+      <input type="radio" name="Q2" value="Jupiter">
+      <label>Jupiter</label><br>
+    </form>
+    
+    <p>Q3. What is the largest planet in our solar system?</p>
+    <form>
+      <input type="radio" name="Q3" value="Venus">
+      <label>Venus</label><br>
+      
+      <input type="radio" name="Q3" value="Earth">
+      <label>Earth</label><br>
+      
+      <input type="radio" name="Q3" value="Neptune">
+      <label>Neptune</label><br>
+      
+      <input type="radio" name="Q3" value="Jupiter">
+      <label>Jupiter</label><br>
+    </form>
+    
+    <p>Q4. What is the name of the first human to walk on the Moon?</p>
+    <form>
+      <input type="radio" name="Q4" value="Yuri Gagarin">
+      <label>Yuri Gagarin</label><br>
+      
+      <input type="radio" name="Q4" value="Neil Armstrong">
+      <label>Neil Armstrong</label><br>
+      
+      <input type="radio" name="Q4" value="John Glenn">
+      <label>John Glenn</label><br>
+      
+      <input type="radio" name="Q4" value="Buzz Aldrin">
+      <label>Buzz Aldrin</label><br>
+    </form>
+    
+    <p>Q5. What causes the different phases of the Moon as seen from Earth?</p>
+    <form>
+      <input type="radio" name="Q5" value="Rotation of the Moon">
+      <label>Rotation of the Moon</label><br>
+      
+      <input type="radio" name="Q5" value="Rotation of Earth">
+      <label>Rotation of Earth</label><br>
+      
+      <input type="radio" name="Q5" value="Reflection of sunlight off the Moon">
+      <label>Reflection of sunlight off the Moon</label><br>
+      
+      <input type="radio" name="Q5" value="Shadow cast by Earth">
+      <label>Shadow cast by Earth</label><br>
+    </form>
+    
+    <p>Q6. What is the name of the force that keeps planets in orbit around the Sun?</p>
+    <form>
+      <input type="radio" name="Q6" value="Gravity">
+      <label>Gravity</label><br>
+      
+      <input type="radio" name="Q6" value="Friction">
+      <label>Friction</label><br>
+      
+      <input type="radio" name="Q6" value="Magnetism">
+      <label>Magnetism</label><br>
+      
+      <input type="radio" name="Q6" value="Pressure">
+      <label>Pressure</label><br>
+    </form>
+    
+    <p>Q7. What is the name of the largest moon of Jupiter?</p>
+    <form>
+      <input type="radio" name="Q7" value="Io">
+      <label>Io</label><br>
+      
+      <input type="radio" name="Q7" value="Europa">
+      <label>Europa</label><br>
+      
+      <input type="radio" name="Q7" value="Ganymede">
+      <label>Ganymede</label><br>
+      
+      <input type="radio" name="Q7" value="Callisto">
+      <label>Callisto</label><br>
+    </form>
+    
+    <p>Q8. Which spacecraft was the first to take humans to the Moon?</p>
+    <form>
+      <input type="radio" name="Q8" value="Apollo 11">
+      <label>Apollo 11</label><br>
+      
+      <input type="radio" name="Q8" value="Mercury-Redstone 3">
+      <label>Mercury-Redstone 3</label><br>
+      
+      <input type="radio" name="Q8" value="Vostok 1">
+      <label>Vostok 1</label><br>
+      
+      <input type="radio" name="Q8" value="Gemini 4">
+      <label>Gemini 4</label><br>
+    </form>
+    
+    <p>Q9. What is the name of the galaxy where our solar system is located?</p>
+    <form>
+      <input type="radio" name="Q9" value="Andromeda Galaxy">
+      <label>Andromeda Galaxy</label><br>
+      
+      <input type="radio" name="Q9" value="Milky Way Galaxy">
+      <label>Milky Way Galaxy</label><br>
+      
+      <input type="radio" name="Q9" value="Sombrero Galaxy">
+      <label>Sombrero Galaxy</label><br>
+      
+      <input type="radio" name="Q9" value="Triangulum Galaxy">
+      <label>Triangulum Galaxy</label><br>
+    </form>
+    
+    <p>Q10. What is the term for a group of stars that form a recognizable pattern?</p>
+    <form>
+      <input type="radio" name="Q10" value="Nebula">
+      <label>Nebula</label><br>
+      
+      <input type="radio" name="Q10" value="Galaxy">
+      <label>Galaxy</label><br>
+      
+      <input type="radio" name="Q10" value="Constellation">
+      <label>Constellation</label><br>
+      
+      <input type="radio" name="Q10" value="Cluster">
+      <label>Cluster</label><br>
+      <button type="button" onclick="space()" id="submitBtn">submit</button>
+
+    </form>
+    
+   <div id="result"></div>
+  <script> 
+    let attempt = JSON.parse(localStorage.getItem("YourWorld")) // code by Prem
+
+if(!attempt){// code by prem
+  window.location.href = "quiz_YourWorld_6_12.html"// code by prem
+}// code by prem
+    
+    function space() {
+      let count = 0;
+  
+  const answers = {
+    Q1: "The Moon",
+  Q2: "Mars",
+  Q3: "Jupiter",
+  Q4: "Neil Armstrong",
+  Q5: "Reflection of sunlight off the Moon",
+  Q6: "Gravity",
+  Q7: "Ganymede",
+  Q8: "Apollo 11",
+  Q9: "Milky Way Galaxy",
+  Q10: "Constellation"
+  };
+  
+  for (let i = 1; i <= Object.keys(answers).length; i++) {
+    const questionKey = "Q" + i;
+    const selectedAnswer = document.querySelector(`input[name=${questionKey}]:checked`);
+  
+    if (selectedAnswer) {
+        const userAnswer = selectedAnswer.value.trim().toLowerCase();
+  
+        if (userAnswer === answers[questionKey].toLowerCase()) {
+            count++;
+        }
+    }
+  }
+  
+  // Display marks
+  const resultElement = document.getElementById("result");
+  resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
+  sessionStorage.setItem('quizScore', count);
+  localStorage.setItem('ExploringSpace', count >= 7? true: false)// code by prem
+  
+  // Redirect to the result page (if needed)
+  window.location.href = "score.html";
+  }</script>
+</body>
+
+</html>

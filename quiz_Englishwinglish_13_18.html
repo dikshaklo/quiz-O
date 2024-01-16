@@ -1,0 +1,282 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>english winglish</title>
+  <style>
+    *{
+        background-color: rgb(189, 201, 206);
+    }
+    #animal{
+        background-color: rgb(170, 108, 108);
+        opacity: 0.7;
+        border: 3px solid  rgb(6, 40, 79);
+    }
+    h1{
+        text-align: center;
+        font-size: 55px;
+        font-family: serif;
+        color: rgb(0, 0, 0);
+    }
+    p{
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+       
+    }
+    form{
+    color: rgb(0, 0, 0);
+  }
+  #kingdom{
+    border: 2px solid rgb(6, 40, 79);
+    padding: 4%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+  }
+  #timer2{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+  }
+  #submitBtn{
+    float: right;
+  background-color: rgb(180, 201, 219);
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25%;
+  font-size: 20px;
+   
+  }
+
+  #timer{
+    margin-left: 3%;
+    margin-top: 3%;
+    position: fixed;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    border: 2px solid rgb(4, 44, 86);
+    width: fit-content;
+    padding: 1%;
+    background-color: rgb(200, 191, 204);
+  }
+  </style>
+
+</head>
+
+<body style="background-image:url(english.jpeg) ;background-repeat: no-repeat;background-size: cover;">
+  
+ <div id="animal"> <h1>
+    ENGLISH WINGLISH</h1></div>
+    <div id="timer">10:00</div>
+    <script>
+      function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          english();
+        }
+    }, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+   let timerDuration = 600;
+   let timerDisplay = document.getElementById('timer');
+   startTimer(timerDuration, timerDisplay);
+});</script>
+      <div id="kingdom">
+  <hr>
+  <p>Q1.What does the slang term "lit" mean in English slang?</p>
+  <form>
+    <input type="radio" name="Q1" value="Drunk">
+    <label>Drunk</label>
+    <BR>
+     <input type="radio" name="Q1" value="Exciting or amazing">
+    <label>Exciting or amazing</label>
+    
+    <BR> 
+      <input type="radio" name="Q1" value="Tired">
+    <label>Tired</label>
+    <br>
+    <input type="radio" name="Q1" value="Angry">
+    <label>Angry</label>
+ 
+   <br>
+  </form>
+  <p>Q2.What does "LOL" stand for in online conversations or texting?</p>
+<Form> <input type="radio" name="Q2" value="Lots of love">
+    <label>Lots of love</label>
+    <br>
+     <input type="radio" name="Q2" value="Laugh out loud ">
+    <label>Laugh out loud</label>
+    <br>
+    <input type="radio"name="Q2" value="Lots of luck">
+    <label>Lots of luck</label>
+    <br>
+     <input type="radio" name="Q2" value="Love or like">
+    <label>Love or like</label>
+<br>
+              </form>
+  <p> Q3.When someone says "I'm down," what does it typically mean?</p>
+  <form>  <input type="radio" name="Q3" value="Feeling low or sad">
+    <label>Feeling low or sad</label>
+    <br>
+     <input type="radio" name="Q3" value="Ready or available to do something">
+    <label>Ready or available to do something</label>
+  <br>
+     <input type="radio"name="Q3" value="Going to bed">
+    <label>Going to bed</label>
+    <br>
+    <input type="radio" name="Q3" value="Uninterested or disengaged">
+    <label>Uninterested or disengaged </label> 
+  <p> Q4.What is the meaning of the term "fam" in slang?</p>
+  <form>  <input type="radio"name="Q4" value="Family or close friends">
+    <label>Family or close friends</label>
+   <br> 
+ <input type="radio" name="Q4" value="Fantastic">
+    <label>Fantastic</label>
+    <br>
+    <input type="radio" name="Q4" value="Familia">
+    <label>Familia</label>
+    <br>
+    <input type="radio" name="Q4" value="famous">
+    <label>famous</label>
+    <br>
+              </form>
+  <p> Q5. What does it mean if someone is described as "extra"?</p>
+  <form>  <input type="radio" name="Q5" value="Extremely talented">
+    <label>Extremely talented</label><br>
+    <input type="radio" name="Q5" value="Over the top or dramatic">
+    <label>Over the top or dramatic</label>
+    
+    <br>
+     <input type="radio" name="Q5" value="Reserved or shy">
+    <label>Reserved or shy</label>
+    <br>
+ <input type="radio" name="Q5" value="Particularly friendly">
+    <label>Particularly friendly</label>
+       
+    <br>
+              </form>
+  <p>Q6.What does the term "YOLO" stand for in slang?</p>
+               <form>
+                <input type="radio" name="Q6" value="You're out of luck" ><label>You're out of luck</label>
+<br>
+                <input type="radio" name="Q6" value="You only live once"><label>You only live once</label>
+                <br>
+                <input type="radio" name="Q6" value="You're on leave"><label>You're on leave</label>
+                <br>
+                <input type="radio" name="Q6" value="You oughta laugh"><label>You oughta laugh</label>
+                        <br></form>
+  <p>Q7.If someone is "throwing shade," what are they doing?</p>
+  <form>
+     <input type="radio" name="Q7" value="Complimenting"><label>Complimenting</label>
+<br>
+ <input type="radio" name="Q7" value="CriticiZing or insulting indirectly"><label>  CriticiZing or insulting indirectly</label>
+<br>
+ <input type="radio" name="Q7" value="Sharing secrets"><label>Sharing secrets</label>
+<br>
+<input type="radio" name="Q7" value="Ignoring someone"><label>Ignoring someone</label>
+   
+    <br>    
+              </form>
+  <p>Q8.What does "TBH" stand for when used in online conversations?</p>
+<form>  <input type="radio" name="Q8" value="To be healthy"><label>To be healthy</label>
+
+<br> <input type="radio" name="Q8" value="To be honest"><label>To be honest</label>
+    
+    <br> <input type="radio"  name="Q8" value="Total badass hero"><label>Total badass hero</label>
+    
+    <br><input type="radio"  name="Q8" value="Totally bold here"><label>Totally bold here</label>
+               <br>
+              </form>
+              
+  <p>Q9.What does the slang term "bae" mean?</p>
+  <form>
+     <input type="radio"  name="Q9" value="Best at everything"><label>Best at everything</label>
+<br>
+     <input type="radio" name="Q9" value="Before anyone else"><label>Before anyone else</label>
+    <br>
+    <input type="radio" name="Q9" value="Beautiful and extraordinary"><label>Beautiful and extraordinary</label>
+    <br>
+ <input type="radio" name="Q9" value="Baby elephant"><label>Baby elephant</label>
+               <br>
+              </form>
+  <p> Q10.When someone says "I'm shook," what does it mean?</p>
+<form> <input type="radio" name="Q10" value="Confused"><label>Confused</label>
+<br>
+     <input type="radio" name="Q10" value="Excited"><label>Excited</label>
+    <br>
+     <input type="radio" name="Q10" value="Surprised or emotionally shaken"><label>Surprised or emotionally shaken</label>
+    <br>
+     <input type="radio" name="Q10" value="Exhausted"><label>Exhausted</label>
+             <br>
+             <button type="button" onclick="english()" id="submitBtn">submit</button>
+              </form>
+              <div id="result"></div>
+  
+              <script >
+               let attempt = JSON.parse(localStorage.getItem("TheEarth")) // code by Prem
+
+if(!attempt){// code by prem
+    window.location.href = "quiz_TheEarth_13_18.html"// code by prem
+}// code by prem
+                
+                
+                function english() {
+                  let count = 0;
+            
+            const answers = {
+              Q1: "Exciting or amazing",
+  Q2: "Laugh out loud",
+  Q3: "Ready or available to do something",
+  Q4: "Family or close friends",
+  Q5: "Over the top or dramatic",
+  Q6: "You only live once",
+  Q7: "Criticizing or insulting indirectly",
+  Q8: "To be honest",
+  Q9: "Before anyone else",
+  Q10: "Surprised or emotionally shaken"
+            };
+            
+            for (let i = 1; i <= Object.keys(answers).length; i++) {
+                const questionKey = "Q" + i;
+                const selectedAnswer = document.querySelector(`input[name=${questionKey}]:checked`);
+            
+                if (selectedAnswer) {
+                    const userAnswer = selectedAnswer.value.trim().toLowerCase();
+            
+                    if (userAnswer === answers[questionKey].toLowerCase()) {
+                        count++;
+                    }
+                }
+            }
+            
+            // Display marks
+            const resultElement = document.getElementById("result");
+            resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
+            sessionStorage.setItem('quizScore', count);
+            localStorage.setItem('Englishwinglish', count >= 7? true: false)// code by prem
+            
+            // Redirect to the result page (if needed)
+            window.location.href = "score2.html";
+            }
+                </script>
+</body>
+
+</html>

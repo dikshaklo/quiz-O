@@ -1,0 +1,293 @@
+
+                 <!-- 
+                 Online HTML, CSS and JavaScript editor to run code online.
+                 -->
+                 <!DOCTYPE html>
+                 <html lang="en">
+
+                 <head>
+                   <meta charset="UTF-8" />
+                   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                   <link rel="stylesheet" href="style.css" />
+                   <title>the earth</title>
+                   <style>
+                     *{
+                         background-color: rgb(17, 34, 162);
+                     }
+                     #animal{
+                         background-color: rgb(38, 124, 74);
+                         opacity: 0.7;
+                         border: 3px solid  rgb(6, 40, 79);
+                     }
+                     h1{
+                         text-align: center;
+                         font-size: 55px;
+                         font-family: serif;
+                         color: rgb(171, 200, 209);
+                     }
+                     p{
+                         font-weight: bold;
+                         color: rgb(180, 219, 252);
+
+                     }
+                     form{
+                     color: aliceblue;
+                   } 
+                   #kingdom{
+                     border: 2px solid rgb(6, 40, 79);
+                     padding: 4%;
+                     margin-top: 2%;
+                     margin-left: 20%;
+                     margin-right: 20%;
+
+                   }
+                   #submitBtn{
+                    float: right;
+  background-color: rgb(180, 201, 219);
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25%;
+  font-size: 20px;
+                   }
+
+                   #timer{
+                     margin-left: 3%;
+                     margin-top: 3%;
+                     position: fixed;
+                     color: rgb(255, 254, 254);
+                     font-size: 30px;
+                     border: 2px solid rgb(4, 44, 86);
+                     width: fit-content;
+                     padding: 1%;
+                     background-color: rgb(50, 53, 232);
+                   }
+
+                 </style>
+
+                 </head>
+
+                 <body style="background-image:url(world.jpeg) ;background-repeat: no-repeat;background-size: cover;">
+                  <div id="animal"> <h1>
+                     THE EARTH</h1></div>
+                     <div id="timer">10:00</div>
+                     <script>
+                       function startTimer(duration, display) {
+                     let timer = duration, minutes, seconds;
+                     setInterval(function () {
+                         minutes = parseInt(timer / 60, 10);
+                         seconds = parseInt(timer % 60, 10);
+
+                         minutes = minutes < 10 ? "0" + minutes : minutes;
+                         seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                         display.textContent = minutes + ":" + seconds;
+
+                         if (--timer < 0) {
+                           earth();
+                         }
+                     }, 1000);
+                 }
+
+                 document.addEventListener("DOMContentLoaded", function () {
+                    let timerDuration = 600;
+                    let timerDisplay = document.getElementById('timer');
+                    startTimer(timerDuration, timerDisplay);
+                 });</script>
+                       <div id="kingdom">
+                   <hr>
+                   <p>Q1.Which layer of the Earth's atmosphere is closest to the surface?</p>
+                   <form>
+                     <input type="radio" name="Q1" value="Stratosphere">
+                 <label>Stratosphere</label>
+                 <br>
+                  <input type="radio" name="Q1" value="Troposphere">
+                 <label>Troposphere</label>
+                 <br>
+                  <input type="radio" name="Q1" value="Mesosphere">
+                 <label>Mesosphere</label>
+                 <br>
+                  <input type="radio" name="Q1" value="Thermosphere">
+                 <label>Thermosphere</label><br>
+                   </form>
+                   <p>Q2.The Earth's inner core is primarily composed of:
+                 </p>
+                     <form>
+                      <input type="radio" name="Q2" value="Iron and nickel">
+                         <label>Iron and nickel</label>
+                         <br>
+                          <input type="radio"name="Q2" value="Silicon and oxygen">
+                         <label>Silicon and oxygen</label>
+                         <br>
+                          <input type="radio" name="Q2" value="Water and ice">
+                         <label>Water and ice</label>
+                         <br>
+                      <input type="radio" name="Q2" value="Aluminum and magnesium">
+                         <label>Aluminum and magnesium</label><br>
+                               </form>
+                   <p> Q3.The movement of tectonic plates is responsible for:</p>
+                 <form>
+                     <input type="radio" name="Q3" value="Earthquakes and volcanic eruptions">
+                     <label>Earthquakes and volcanic eruptions</label>
+                     <br>
+                      <input type="radio" name="Q3" value="Rainfall and hurricanes">
+                     <label>Rainfall and hurricanes</label>
+                     <br>
+                     <input type="radio" name="Q3" value="Aurora borealis">
+                     <label>Aurora borealis</label>
+                     <br>
+                  <input type="radio" name="Q3" value="Solar eclipses">
+                     <label>Solar eclipses</label><br>
+                               </form>
+                   <p> Q4.Approximately what percentage of the Earth's surface is covered by water?</p>
+                      <form>
+                         <input type="radio" name="Q4" value="50%">
+                         <label>50%</label>
+                         <br>
+                          <input type="radio" name="Q4" value="70%" > 
+                         <label>70%</label>
+                         <br>
+                          <input type="radio" name="Q4" value="80%">
+                         <label>80%</label>
+                         <br>
+                          <input type="radio" name="Q4" value="90%">
+                         <label>90%</label><br>
+                               </form>
+                   <p> Q5. Which phenomenon is caused by the Earth's rotation and is responsible for the deflection of winds and ocean currents?</p>
+                        <form>
+                         <input type="radio" name="Q5" value="Coriolis effect">
+                         <label>Coriolis effect</label>
+                         <br>
+                         <input type="radio" name="Q5" value="El Niño">
+                         <label>El Niño</label>
+                         <br>
+                          <input type="radio" name="Q5" value="Greenhouse effect">
+                         <label>Greenhouse effect</label>
+                         <br>
+                         <input type="radio" name="Q5" value="Solar radiation">
+                         <label>Solar radiation</label><br>
+                               </form>
+                   <p>Q6.The ozone layer is found in which layer of the Earth's atmosphere?</p>
+                                <form>
+                                 <input type="radio" name="Q6" value="Stratosphere">
+                                 <label>Stratosphere</label>
+                                 <br>
+                                 <input type="radio"  name="Q6" value="Troposphere">
+                                 <label>Troposphere</label>
+                                <br> 
+                                 <input type="radio"  name="Q6" value="Mesosphere">
+                                 <label>Mesosphere</label>
+                                 <br>
+                                 <input type="radio"  name="Q6" value="Thermosphere">
+                                 <label>Thermosphere</label>
+                                         <br>
+                   <p>Q7.The Earth's crust is primarily made up of which elements?</p>
+                   <form>
+                     <input type="radio" name="Q7" value="Silicon and oxygen">
+                     <label>Silicon and oxygen</label>
+                     <br>
+                     <input type="radio" name="Q7" value="Iron and nickel">
+                     <label>Iron and nickel</label>
+                     <br>
+                      <input type="radio" name="Q7" value="Carbon and hydrogen">
+                     <label>Carbon and hydrogen</label>
+                     <br>
+                      <input type="radio" name="Q7" value="Aluminum and magnesium">
+                     <label>Aluminum and magnesium</label>
+                     <br>    
+                               </form>
+                   <p>Q8.What is the outermost layer of the Earth called?</p>
+                 <form>     <input type="radio" name="Q8" value="Mantle">
+                     <label>Mantle</label>
+                     <br>
+                      <input type="radio" name="Q8" value="Crust">
+                     <label>Crust</label>
+                     <br>
+                      <input type="radio"name="Q8" value="Core">
+                     <label>Core</label>
+                     <br>
+                     <input type="radio" name="Q8" value="Lithosphere">
+                     <label>Lithosphere</label>
+                                <br>
+                               </form>
+
+                   <p>Q9.The Earth's magnetic field is primarily generated by movements in which layer?</p>
+                   <form>
+                   <input type="radio" name="Q9" value="Inner core">
+                     <label>Inner core</label>
+                     <br>
+                      <input type="radio" name="Q9" value="Outer core">
+                     <label>Outer core</label>
+                     <br>
+                      <input type="radio" name="Q9" value="Mesosphere">
+                     <label>Mesosphere</label>
+                     <br>
+                      <input type="radio" name="Q9" value="Crust">
+                     <label>Crust</label>
+                                <br>
+                               </form>
+                   <p> Q10.What natural phenomenon causes the changing of seasons on Earth?</p>
+                 <form>  <input type="radio" name="Q10" value="Rotation">
+                     <label>Rotation</label>
+                     <br>
+                      <input type="radio" name="Q10" value="Revolution">
+                     <label>Revolution</label>
+                     <br>
+                      <input type="radio" name="Q10" value="Tidal forces">
+                     <label>Tidal forces</label>
+                     <br>
+                      <input type="radio" name="Q10" value="Coriolis effect">
+                     <label>Coriolis effect</label>
+                              <br> <button type="button"  onclick="earth()" id="submitBtn">submit</button>
+                               </form>
+
+                   <div id="result"></div>
+
+                  <script>
+                      let attempt = JSON.parse(localStorage.getItem("riddles")) // code by Prem
+
+if(!attempt){// code by prem
+    window.location.href = "quiz_riddles_13_18.html"// code by prem
+}// code by prem
+
+                       function earth() {
+                         let count = 0;
+
+                   const answers = {
+                     Q1: "Troposphere",
+                   Q2: "Iron and nickel",
+                   Q3: "Earthquakes and volcanic eruptions",
+                   Q4: "70%",
+                   Q5: "Coriolis effect",
+                   Q6: "Stratosphere",
+                   Q7: "Silicon and oxygen",
+                   Q8: "Crust",
+                   Q9: "Outer core",
+                   Q10: "Revolution"
+                   };
+
+                   for (let i = 1; i <= Object.keys(answers).length; i++) {
+                       const questionKey = "Q" + i;
+                       const selectedAnswer = document.querySelector(`input[name=${questionKey}]:checked`);
+
+                       if (selectedAnswer) {
+                           const userAnswer = selectedAnswer.value.trim().toLowerCase();
+
+                           if (userAnswer === answers[questionKey].toLowerCase()) {
+                               count++;
+                           }
+                       }
+                   }
+
+                   // Display marks
+                   const resultElement = document.getElementById("result");
+                   resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
+                   sessionStorage.setItem('quizScore', count);
+                   localStorage.setItem('TheEarth', count >= 7? true: false)// code by prem
+
+                   // Redirect to the result page (if needed)
+                   window.location.href = "score2.html";
+                   }
+                       </script></script>
+                 </body>
+
+                 </html>

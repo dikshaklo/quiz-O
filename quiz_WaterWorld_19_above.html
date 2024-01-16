@@ -1,0 +1,261 @@
+<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+<!--CSS Part-->
+  <style>
+   
+    *{
+        background-color: rgba(57, 90, 125, 1);
+    }
+    #animal{
+        background-color: rgba(176, 228, 244, 1);
+        opacity: 0.7;
+        border: 3px solid rgba(57, 0, 236, 1);
+    }
+    h1{
+        text-align: center;
+        font-size: 55px;
+        font-family: serif;
+        color: rgb(255, 255, 255);
+    }
+    p{
+        font-weight: bold;
+        color :rgb(157, 218, 246)
+    }
+    form{
+    color:rgb(224, 228, 249);
+  }
+  #kingdom{
+    border: 2px solid rgba(243, 191, 21, 1);
+    padding: 4%;
+    margin-left: 20%;
+    margin-right: 20%;
+   
+  }
+  #submitBtn{
+    float: right;
+  background-color: rgb(180, 201, 219);
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25%;
+  font-size: 20px;
+   
+  }
+
+  #timer{
+    margin-left: 3%;
+    margin-top: 3%;
+    position: fixed;
+    color: rgb(253, 253, 253);
+    font-size: 30px;
+    border: 2px solid rgb(4, 44, 86);
+    width: fit-content;
+    padding: 1%;
+    background-color: rgb(84, 125, 164);
+  }
+  </style>
+ 
+
+</head>
+
+<body style="background-image:url(wateer.jpeg) ;background-repeat: no-repeat;background-size: cover;">
+ <div id="animal"> <h1>
+    WATER WORLD</h1></div>
+    <div id="timer">10:00</div>
+    <script>
+      function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          water();
+        }
+    }, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+   let timerDuration = 600;
+   let timerDisplay = document.getElementById('timer');
+   startTimer(timerDuration, timerDisplay);
+});</script>
+    <HR>
+  <div id="kingdom">
+  <p> Q1.What is the most captivating feature of underwater ecosystems?</p>
+  <form>
+    <input type="radio" name="Q1" value="Colorful coral reefs">
+<lable>Colorful coral reefs</lable><br>
+          <input type="radio" name="Q1" value="Diverse marine life form">
+ <lable>Diverse marine life form</lable><br>
+<input type="radio" name="Q1" value="Vast, unexplored depths">
+<lable> Vast, unexplored depths</lable><br>
+  <input type="radio" name="Q1" value=" Mysterious underwater caves">
+ <lable> Mysterious underwater caves</lable><br>
+    </form>
+    <p> Q2.Should protecting coral reefs be a top global priority?</p>
+    <form>
+      <input type="radio" name="Q2" value="Yes, they're vital for marine biodiversity">
+<lable>Yes, they're vital for marine biodiversity</lable><br>
+        <input type="radio"name="Q2" value="No, there are more pressing environmental issues">
+ <lable> No, there are more pressing environmental issues</lable><br>
+          <input type="radio" name="Q2" value="Maybe, depending on their ecological impact">
+<lable>Maybe, depending on their ecological impact</lable><br>
+            <input type="radio"name="Q2" value="Unsure, more research is needed">
+<lable>Unsure, more research is needed</lable><br>
+              </form>
+  <p> Q3.Which sea creature deserves more attention and why?</p>
+ <form>
+      <input type="radio" name="Q3" value="Octopus – for its intelligence and adaptability">
+<lable>Octopus – for its intelligence and adaptability</lable><br>
+        <input type="radio"name="Q3" value="Sea cucumber – for its role in the ecosystem">
+ <lable>Sea cucumber – for its role in the ecosystem</lable><br>
+          <input type="radio" name="Q3" value="Nautilus – for its ancient evolutionary history">
+<lable>Nautilus – for its ancient evolutionary history</lable><br>
+            <input type="radio" name="Q3" value="Jellyfish – for its unique biological features">
+<lable>Jellyfish – for its unique biological features</lable><br>
+              </form>
+
+  <p> Q4.Do we need more extensive exploration of the deepest parts of the ocean?</p>
+     <form>
+      <input type="radio" name="Q4" value="Yes, to understand unknown ecosystems">
+        <lable>Yes, to understand unknown ecosystems</lable><br>
+        <input type="radio" name="Q4" value="No, it's too challenging and costly">
+        <lable>No, it's too challenging and costly</lable><br>
+          <input type="radio" name="Q4" value="Maybe, but only for scientific purposes">
+        <lable>Maybe, but only for scientific purposes</lable><br>
+            <input type="radio" name="Q4" value="Unsure, the current knowledge is sufficient">
+              <lable>Unsure, the current knowledge is sufficient</lable><br>
+              </form>
+  <p> Q5.How much do human activities impact marine life?</p>
+       <form>
+      <input type="radio" name="Q5" value="Unsure, more research is needed">
+        <lable>Unsure, more research is needed</lable><br>
+        <input type="radio"name="Q5" value="Moderately, affecting specific species">
+        <lable>Moderately, affecting specific species</lable><br>
+          <input type="radio" name="Q5" value="Minimally, nature can adapt to changes">
+        <lable>Minimally, nature can adapt to changes</lable><br>
+            <input type="radio" name="Q5" value="Significantly, leading to biodiversity loss">
+              <lable>Significantly, leading to biodiversity loss</lable><br>
+              </form>
+  <p>Q6.Are marine sanctuaries effective in preserving underwater biodiversity?</p>
+     <form>
+      <input type="radio" name="Q6" value="No, human interference nullifies their purpose">
+        <lable>No, human interference nullifies their purpose</lable><br>
+        <input type="radio" name="Q6" value="Unsure, their impact needs more assessment">
+        <lable>Unsure, their impact needs more assessment</lable><br>
+          <input type="radio" name="Q6" value="Maybe, but enforcement is a challenge">
+        <lable>Maybe, but enforcement is a challenge</lable><br>
+            <input type="radio" name="Q6" value="Yes, they provide vital protected areas">
+              <lable>Yes, they provide vital protected areas</lable><br>
+              </form>
+              <p>Q7.Which underwater adaptation do you find most impressive?
+</p>
+               <form>
+      <input type="radio" name="Q7" value="Hydrothermal vent adaptation – for its extreme conditions">
+        <lable>Hydrothermal vent adaptation – for its extreme conditions</lable><br>
+        <input type="radio" name="Q7" value="Deep-sea gigantism – for its size adaptation">
+        <lable>Deep-sea gigantism – for its size adaptation</lable><br>
+          <input type="radio" name="Q7" value="Camouflage – for its incredible mimicry">
+        <lable>Camouflage – for its incredible mimicry</lable><br>
+            <input type="radio" name="Q7" value="Bioluminescence – for its fascinating glow">
+              <lable>Bioluminescence – for its fascinating glow</lable><br>
+              </form>
+            <p>Q8.How should technology contribute to understanding and conserving underwater ecosystems?
+</p>
+               <form>
+      <input type="radio" name="Q8" value="By advanced underwater research tools">
+        <lable> By advanced underwater research tools</lable><br>
+        <input type="radio" name="Q8" value="Through AI monitoring systems">
+        <lable>Through AI monitoring systems</lable><br>
+          <input type="radio" name="Q8" value="Utilizing drones and robotics">
+        <lable>Utilizing drones and robotics</lable><br>
+            <input type="radio" name="Q8" value="Unsure, technology might have limited impact">
+              <lable>Unsure, technology might have limited impact</lable><br>
+              </form>  
+  <p>Q9.Should educational programs focus more on the importance of oceans and marine life?
+</p>
+               <form>
+      <input type="radio" name="Q9" value="Yes, to raise awareness for conservation">
+        <lable>Yes, to raise awareness for conservation</lable><br>
+        <input type="radio" name="Q9" value="No, other environmental issues are more critical">
+        <lable>No, other environmental issues are more critical</lable><br>
+          <input type="radio" name="Q9" value="Maybe, depending on the target audience">
+        <lable>Maybe, depending on the target audience</lable></lable><br>
+            <input type="radio" name="Q9" value="Unsure, it might not lead to significant change">
+              <lable>Unsure, it might not lead to significant change</lable><br>
+              </form>
+  <p> Q10. How should we balance utilizing ocean resources and preserving marine ecosystems?</p>
+       <form>
+      <input type="radio" name="Q10" value="Prioritize conservation for future generations">
+        <lable>Prioritize conservation for future generations</lable><br>
+        <input type="radio" name="Q10" value="Exploit resources for immediate human needs">
+        <lable>Exploit resources for immediate human needs</lable><br>
+          <input type="radio" name="Q10" value="Find a compromise between both aspects ">
+        <lable>Find a compromise between both aspects </lable><br>
+            <input type="radio" name="Q10"value="Unsure, it's a complex issue with no clear solution">
+              <lable>Unsure, it's a complex issue with no clear solution</lable><br>
+            <button type="button"onclick="water()" id="submitBtn"> submit</button>
+              </form>
+             
+              <div id="result"></div>
+              <script >
+ let attempt = JSON.parse(localStorage.getItem("FoodieCorner")) // code by Prem
+
+if(!attempt){// code by prem
+  window.location.href = "quiz_FoodieCorner_19_above.html"// code by prem
+}// code by prem 
+    
+    function water() {
+      let count = 0;
+
+const answers = {
+  Q1: "Diverse marine life form",
+  Q2: "Yes, they're vital for marine biodiversity",
+  Q3: "Octopus – for its intelligence and adaptability",
+  Q4: "Yes, to understand unknown ecosystems",
+  Q5: "Significantly, leading to biodiversity loss",
+  Q6: "Yes, they provide vital protected areas",
+  Q7: "Bioluminescence – for its fascinating glow",
+  Q8: "Through AI monitoring systems",
+  Q9: "Yes, to raise awareness for conservation",
+  Q10: "Find a compromise between both aspects"
+};
+
+for (let i = 1; i <= Object.keys(answers).length; i++) {
+    const questionKey = "Q" + i;
+    const selectedAnswer = document.querySelector(`input[name=${questionKey}]:checked`);
+
+    if (selectedAnswer) {
+        const userAnswer = selectedAnswer.value.trim().toLowerCase();
+
+        if (userAnswer === answers[questionKey].toLowerCase()) {
+            count++;
+        }
+    }
+}
+
+// Display marks
+const resultElement = document.getElementById("result");
+resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
+sessionStorage.setItem('quizScore', count);
+localStorage.setItem('WaterWorld', count >= 7? true: false)// code by prem
+
+// Redirect to the result page (if needed)
+window.location.href = "score3.html";
+}
+
+              </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>score</title>
+    <style>
+        #greet{
+            font-family:itallic;
+            margin-top: 150px;
+            font-size: 50px
+        }
+        div{
+            border:4px solid white;
+            background-color: rgb(88, 134, 134);
+
+        }
+        #motivation {
+      font-style: italic;
+      margin-top: 30px;
+      font-size: 20px;
+     color: rgb(132, 106, 1);
+     text-shadow: 2px 1px 1px grey;
+    }
+    #text{
+       font-size: 30px; 
+       font-family: itallic;
+    }
+#score{
+    font-size: 20px;
+}
+        </style>
+</head>
+<body style="background-color: rgb(16, 61, 71);color: rgb(201, 223, 216);text-align: center;">
+    <h1 id="greet">Conguratulation!!</h1>
+<div>
+    <p id="text">Your Quiz Score:</p>
+    <p id="score"></p>
+
+</div>
+
+    <p id="motivation">"Keep moving forward! Every challenge is an opportunity to learn and grow."</p>
+
+    <a href="index.html">
+        <img src="restart-7.png" height="50px" width="50px">
+        
+    </a>
+    
+    <a href="quiz_topic_6_12.html">
+        <img src="menu(1).jpg" height="50px" width="60px">
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+        const quizScore = sessionStorage.getItem('quizScore');
+        
+ var b=document.getElementById("score").innerHTML=`${quizScore}/10`
+// Display the score on the result page
+
+    </script>
+</body>
+</html>

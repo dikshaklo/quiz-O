@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Riddles</title>
+    <style>
+      * {
+          background-color: rgb(1, 36, 16);
+      }
+
+      #animal {
+          background-color: rgb(91, 119, 62);
+          opacity: 0.7;
+          border: 3px solid rgb(6, 40, 79);
+      }
+
+      h1 {
+          text-align: center;
+          font-size: 55px;
+          font-family: serif;
+          color: rgb(171, 200, 209);
+      }
+
+      p {
+          font-weight: bold;
+          color: rgb(180, 219, 252);
+      }
+
+      form {
+          color: aliceblue;
+      }
+
+      #kingdom {
+          border: 2px solid rgb(6, 40, 79);
+          padding: 4%;
+          margin-top: 2%;
+          margin-left: 20%;
+          margin-right: 20%;
+      }
+      
+      textarea{
+        background-color: white;
+      }
+      #submitBtn{
+        float: right;
+  background-color: rgb(180, 201, 219);
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25%;
+  font-size: 20px;
+ 
+}
+
+#timer{
+  margin-left: 3%;
+  margin-top: 3%;
+  position: fixed;
+  color: rgb(247, 242, 242);
+  font-size: 30px;
+  border: 2px solid rgb(4, 44, 86);
+  width: fit-content;
+  padding: 1%;
+  background-color: rgb(25, 74, 60);
+}
+
+    </style>
+</head>
+
+<body style="background-image:url(puzzles.jpeg) ;background-repeat: no-repeat;background-size: cover;">
+    <div id="animal">
+        <h1>RIDDLES</h1>
+    </div>
+    <div id="timer">10:00</div>
+    <script>
+      function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          calculateMarks();
+        }
+    }, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+   let timerDuration = 600;
+   let timerDisplay = document.getElementById('timer');
+   startTimer(timerDuration, timerDisplay);
+});</script>
+
+    <div id="kingdom">
+        <hr>
+        
+  
+           
+        <form>
+          <p>Q1. What month of the year has 28 days?</p>
+          <input type="radio" name="Q1" value="All"><label>all</label>
+          <br>
+          <input type="radio" name="Q1" value="february"><label>february</label>
+         <br>
+          <input type="radio" name="Q1" value="Both"><label>Both</label><br>
+          <input type="radio" name="Q1" value="None of above"><label>None of above</label><br>
+
+            <p>Q2. What has a head and a tail but no body?</p>
+            <input type="radio" name="Q2" value="Coin"><label>Coin</label>
+            <br>
+            <input type="radio" name="Q2" value="Note"><label>Note</label>
+            <br>
+            <input type="radio" name="Q2" value="Both"><label>Both</label><br>
+            <input type="radio" name="Q2" value="None of above"><label>None of above</label><br>
+
+            <p>Q3.  I am an odd number. Take away a letter and I become even. What number am I?
+          </p>
+          <input type="radio" name="Q3" value="Seven"><label>Seven</label>
+          <br>
+          <input type="radio" name="Q3" value="Twelve"><label>Twelve</label>
+          <br>
+          <input type="radio" name="Q3" value="Both"><label>Both</label><br>
+          <input type="radio" name="Q3" value="None of above"><label>None of above</label><br>
+
+            <p>Q4. I have lakes with no water, mountains with no stone and cities with no buildings. What am I?
+          </p>
+          <input type="radio" name="Q4" value="Atlas"><label>Atlas</label>
+          <br>
+          <input type="radio" name="Q4" value="Map"><label>Map</label>
+          <br>
+          <input type="radio" name="Q4" value="Both"><label>Both</label><br>
+          <input type="radio" name="Q4" value="None of above"><label>None of above</label><br>
+
+            <p>Q5.The more you take, the more you leave behind. What are they?
+          </p>
+          <input type="radio" name="Q5" value="Shadow"><label>Shadow</label>
+          <br>
+          <input type="radio" name="Q5" value="Past"><label>Past</label>
+          <br>
+          <input type="radio" name="Q5" value="footsteps"><label>footsteps</label><br>
+          <input type="radio" name="Q5" value="None of above"><label>None of above</label><br>
+
+            <p>Q6. What has words, but never speaks?
+          </p>
+          <input type="radio" name="Q6" value="Lips"><label>Lips</label>
+          <br>
+          <input type="radio" name="Q6" value="Past"><label>Past</label>
+          <br>
+          <input type="radio" name="Q6" value="Pen"><label>Pen</label><br>
+          <input type="radio" name="Q6" value="Book"><label>Book </label><br>
+
+            <p>Q7. I’m tall when I’m young, and I’m short when I’m old. What am I?
+          </p> <input type="radio" name="Q7" value="Pen"><label>Pen</label>
+          <br>
+          <input type="radio" name="Q7" value="Candle"><label>Candle</label>
+          <br>
+          <input type="radio" name="Q7" value="Old man"><label>Old man</label><br>
+          <input type="radio" name="Q7" value="Animals"><label>Animals </label><br>
+            
+            <p>Q8. What is full of holes but still holds water?
+            </p> <input type="radio" name="Q8" value="spounge"><label>spounge</label>
+            <br>
+            <input type="radio" name="Q8" value="Tissue"><label>Tissue</label>
+            <br>
+            <input type="radio" name="Q8" value="paper"><label>paper</label><br>
+            <input type="radio" name="Q8" value="hands"><label>hands </label><br>
+
+          <p>Q9. What is always in front of you but can’t be seen?
+        </p>
+        <input type="radio" name="Q9" value="Present"><label>Present</label>
+        <br>
+        <input type="radio" name="Q9" value="Past"><label>Past</label>
+        <br>
+        <input type="radio" name="Q9" value="Future"><label>Future</label><br>
+        <input type="radio" name="Q9" value="Person"><label>Person </label><br>
+          <p>Q10. What gets wet while drying?
+        </p>
+            <input type="radio" name="Q10" value="Towel">
+            <lable>Towel</lable><br>
+            <input type="radio" name="Q10" value="paper">
+            <lable>paper</lable><br>
+            <input type="radio" name="Q10" value="Spounge">
+            <lable>Spounge</lable><br>
+            <input type="radio" name="Q10" value="clothes">
+            <lable>clothes</lable><br>
+       
+        </form>
+        <button type="button" onclick="calculateMarks()" id="submitBtn">Submit</button>
+        <div id="result"></div>
+    </div>
+
+   
+  
+
+    <script >
+   let attempt = JSON.parse(localStorage.getItem("CurrentAffairs")) // code by Prem
+
+if(!attempt){// code by prem
+    window.location.href = "quiz_CurrentAffairs_13_18.html"// code by prem
+}// code by prem
+
+
+
+function calculateMarks() {
+    let count = 0;
+
+    const answers = {
+        Q1: "All",
+        Q2: "Coin",
+        Q3: "Seven",
+        Q4: "Map",
+        Q5: "footsteps",
+        Q6: "Book",
+        Q7: "Candle",
+        Q8: "spounge",
+        Q9: "Future",
+        Q10: "Towel"
+    };
+
+    for (let i = 1; i <= Object.keys(answers).length; i++) {
+        const questionKey = "Q" + i;
+        const selectedOption = document.querySelector(`input[name="${questionKey}"]:checked`);
+        
+        if (selectedOption) {
+            const userAnswer = selectedOption.value.trim().toLowerCase();
+
+            if (userAnswer === answers[questionKey].toLowerCase()) {
+                count++;
+            }
+        }
+    }
+
+    // Display marks
+    const resultElement = document.getElementById("result");
+    resultElement.textContent = `You scored ${count} out of ${Object.keys(answers).length}`;
+    sessionStorage.setItem('quizScore', count);
+    localStorage.setItem('riddles', count >= 7 ? true : false);
+
+    // Redirect to the result page
+    window.location.href = "score2.html";
+}
+
+    
+</script>
+</body>
+
+</html>
