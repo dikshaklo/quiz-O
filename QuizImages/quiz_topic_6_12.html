@@ -110,66 +110,101 @@ p {
      <div class="topic">
      <h2>Atlas</h2>
      <div class="image">
-      <img src="Atlas.jpeg" alt="Atlas" height="260px" width="400px" class="zoom" onclick="openAtlasQuiz()">
+      <img src="lock.png" alt="Atlas" id="at" height="260px" width="400px" class="zoom" onclick="openAtlasQuiz()">
    </div>
       <p>Atlas serves as Earth's guide, unveiling continents and oceans that shape our world's breathtaking diversity.</p>
    </div>
    <script>
-      function openAtlasQuiz(){
-             window.location.href='quiz_Atlas_6_12.html';
-      }
+       let attempt = JSON.parse(localStorage.getItem("AnimalKingdom")) // code by Prem
+
+if (attempt) {
+   document.getElementById("at").src = "Atlas.jpeg"
+}
+function openAtlasQuiz() {
+   if (attempt) {
+      window.location.href = 'quiz_Atlas_6_12.html';
+   }
+}
      </script>
 
       <div class="topic">
      <h2>Your World</h2>
      <div class="image">
-      <img src="YourWorld.jpeg" alt="YourWorld" height="260px" width="400px" class="zoom" onclick="openYourWorldQuiz()">
+      <img src="lock.png" alt="YourWorld" id="yowd" height="260px" width="400px" class="zoom" onclick="openYourWorldQuiz()">
    </div>
       <p>Your world is a canvas of endless possibilities, waiting for your unique touch to paint its story.</p>
     </div>
     <script>
-      function openYourWorldQuiz(){
-             window.location.href='quiz_YourWorld_6_12.html';
-      }
+      let attempt2 = JSON.parse(localStorage.getItem("Atlas")) // code by Prem
+
+if (attempt2) {
+   document.getElementById("yowd").src = "YourWorld.jpeg"
+}
+function openCurrentAffairsQuiz() {
+   if (attempt2) {
+      window.location.href = 'quiz_YourWorld_6_12.html';
+   }
+}
      </script>
 
       <div class="topic">
      <h2>Exploring Space</h2>
      <div class="image">
-      <img src="ExploringSpace.jpeg" alt="ExploringSpace" height="260px" width="400px" class="zoom" onclick="openExploringSpaceQuiz()">
+      <img src="lock.png" alt="ExploringSpace" id="exsp" height="260px" width="400px" class="zoom" onclick="openExploringSpaceQuiz()">
    </div>
       <p>Exploring space unlocks the mysteries beyond, revealing cosmic wonders that ignite our curiosity and awe.</p>
   </div>
   <script>
-   function openExploringSpaceQuiz(){
-          window.location.href='quiz_ExploringSpace_6_12.html';
+    let attempt3 = JSON.parse(localStorage.getItem("YourWorld")) // code by Prem
+
+if (attempt3) {
+   document.getElementById("exsp").src = "ExploringSpace.jpeg"
+}
+function openExploringSpaceQuiz() {
+   if (attempt3) {
+      window.location.href = 'quiz_ExploringSpace.html';
    }
+}
   </script>
 
       <div class="topic">
      <h2>Cartoon Network</h2>
      <div class="image">
-      <img src="CartoonNetwork.jpeg" alt="CartoonNetwork" height="260px" width="400px" class="zoom" onclick="openCartoonNetworkQuiz()">
+      <img src="lock.png" alt="CartoonNetwork" id="cn" height="260px" width="400px" class="zoom" onclick="openCartoonNetworkQuiz()">
    </div>
       <p>Cartoon Network is a hub of colorful adventures, bringing beloved characters to life with laughter and imagination.</p>
      </div>
      <script>
-      function openCartoonNetworkQuiz(){
-             window.location.href='quiz_cartoonnetwork_6_12.html';
-      }
+      let attempt4 = JSON.parse(localStorage.getItem("ExploringSpace")) // code by Prem
+
+if (attempt4) {
+   document.getElementById("cn").src = "CartoonNetwork.jpeg"
+}
+function openCartoonNetworkQuiz() {
+   if (attempt4) {
+      window.location.href = 'quiz_cartoonnetwork_6_12.html';
+   }
+}
      </script>
 
       <div class="topic">
      <h2>Magical science</h2>
      <div class="image">
-      <img src="MagicalScience.jpeg" alt="MagicalScience" height="260px" width="400px" class="zoom" onclick="openMagicalScienceQuiz()">
+      <img src="lock.png" alt="MagicalScience" id="sci" height="260px" width="400px" class="zoom" onclick="openMagicalScienceQuiz()">
    </div>
       <p>Magical science unveils enchanting discoveries, bridging imagination and knowledge to unravel the wonders of the universe.</p>
     </div>
     <script>
-      function openMagicalScienceQuiz(){
-             window.location.href='quiz_magicalscience_6_12.html';
-      }
+      let attempt5 = JSON.parse(localStorage.getItem("cartoonnetwork")) // code by Prem
+
+if (attempt5) {
+   document.getElementById("sci").src = "MagicalScience.jpeg"
+}
+function openMagicalScienceQuiz() {
+   if (attempt5) {
+      window.location.href = 'quiz_magicalscience_6_12.html';
+   }
+}
      </script>
 
     </div>
